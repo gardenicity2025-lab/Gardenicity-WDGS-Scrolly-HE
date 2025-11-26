@@ -1,114 +1,89 @@
-TEST-RTL-WDGS+LieblingFont in 26-11-25
-
 <!doctype html>
-<html lang="en" data-baseline="stable-2025-10-01__rails-460px__galC-6-only">
+<html lang="he" dir="rtl" data-baseline="stable-2025-10-01__rails-460px__galC-6-only">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Gardenicity — What did Geddes see?</title>
+<title>Gardenicity — Hebrew RTL Conversion</title>
 
 <style>
 /* ==========================================================
-   LIEBLING PRO — FULL FONT FAMILY (ALL WEIGHTS)
-   Internal family name confirmed: "Liebling Pro"
+   LIEBLING PRO — FULL FONT FAMILY
    ========================================================== */
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProThin.woff2") format("woff2"),
-         url("assets/fonts/LieblingProThin.woff") format("woff");
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProThin.woff2") format("woff2"),
+url("assets/fonts/LieblingProThin.woff") format("woff");
+font-weight: 100; font-style: normal; font-display: swap;
 }
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProLight.woff2") format("woff2"),
-         url("assets/fonts/LieblingProLight.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProLight.woff2") format("woff2"),
+url("assets/fonts/LieblingProLight.woff") format("woff");
+font-weight: 300; font-style: normal; font-display: swap;
 }
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProRegular.woff2") format("woff2"),
-         url("assets/fonts/LieblingProRegular.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProRegular.woff2") format("woff2"),
+url("assets/fonts/LieblingProRegular.woff") format("woff");
+font-weight: 400; font-style: normal; font-display: swap;
 }
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProMedium.woff2") format("woff2"),
-         url("assets/fonts/LieblingProMedium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProMedium.woff2") format("woff2"),
+url("assets/fonts/LieblingProMedium.woff") format("woff");
+font-weight: 500; font-style: normal; font-display: swap;
 }
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProBold.woff2") format("woff2"),
-         url("assets/fonts/LieblingProBold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProBold.woff2") format("woff2"),
+url("assets/fonts/LieblingProBold.woff") format("woff");
+font-weight: 700; font-style: normal; font-display: swap;
 }
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProExtraBold.woff2") format("woff2"),
-         url("assets/fonts/LieblingProExtraBold.woff") format("woff");
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProExtraBold.woff2") format("woff2"),
+url("assets/fonts/LieblingProExtraBold.woff") format("woff");
+font-weight: 800; font-style: normal; font-display: swap;
 }
 
 @font-face {
-    font-family: "Liebling Pro";
-    src: url("assets/fonts/LieblingProBlack.woff2") format("woff2"),
-         url("assets/fonts/LieblingProBlack.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+font-family: "Liebling Pro";
+src: url("assets/fonts/LieblingProBlack.woff2") format("woff2"),
+url("assets/fonts/LieblingProBlack.woff") format("woff");
+font-weight: 900; font-style: normal; font-display: swap;
 }
 
 /* FORCE LIEBLING PRO SITEWIDE */
 * {
-    font-family: "Liebling Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
+font-family: "Liebling Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
 }
 
-/* Section running text → Liebling Pro Light (300) (S15 remains regular) */
-.s1-text p,
-.s2-text p,
-.s4-text p,
-.s5-text p,
-.s9-text p,
-.s11-text p,
-.s13-text p,
-.s14-text p {
-    font-weight: 300 !important;
+/* Section running text → Liebling Pro Light (300) */
+.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
+.s11-text p, .s13-text p, .s14-text p {
+font-weight: 300 !important;
 }
 
-/* Rail running text → Liebling Pro Light (300) + tuned line-height */
-.sRail-left p,
-.sRail-right p,
-.sRail-text p {
-    font-weight: 300 !important;
-    line-height: 1.35 !important;
+/* Rail running text */
+.sRail-left p, .sRail-right p, .sRail-text p {
+font-weight: 300 !important;
+line-height: 1.35 !important;
 }
 
 /* ===== Base ===== */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #eaeeec;
-    color: #fff;
-    font-family: "Liebling Pro", "Acumin Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+margin: 0; padding: 0; height: 100%;
+background: #eaeeec; color: #fff;
+font-family: "Liebling Pro", "Acumin Pro", system-ui, sans-serif;
+/* RTL Default Alignment */
+text-align: right;
+direction: rtl;
 }
 
 :root{
@@ -118,41 +93,41 @@ html, body {
 --s1:0; --s1Overlay:0; --s1Y:0px; --s1ImgOpacity:0;
 /* S2 */
 --s2:0; --s2Overlay:0; --s2Y:0px; --s2ImgOpacity:0;
-/* gallery-A-Left */
+/* gallery-A */
 --galA:0;
 --galAImg0Opacity:0; --galAImg1Opacity:0; --galAImg2Opacity:0; --galAImg3Opacity:0;
 --galAReady:0;
-/* S3 (full bleed) */
+/* S3 */
 --s3:0; --s3ImgOpacity:0; --s3Scale:1;
 /* S4 */
 --s4:0; --s4Overlay:0; --s4Y:0px; --s4ImgOpacity:0;
 /* S5 */
 --s5:0; --s5Overlay:0; --s5Y:0px; --s5ImgOpacity:0;
-/* gallery-B-Center */
+/* gallery-B */
 --galB:0;
 --galBImg0Opacity:0; --galBImg1Opacity:0; --galBImg2Opacity:0; --galBImg3Opacity:0; --galBImg4Opacity:0;
 --galBReady:0;
-/* S8 (full bleed) */
+/* S8 */
 --s8:0; --s8ImgOpacity:0; --s8Scale:1; --s8Ready:0;
 /* S9 */
 --s9:0; --s9Overlay:0; --s9Y:0px; --s9ImgOpacity:0;
-/* gallery-C-Right (media left, no text) */
+/* gallery-C */
 --galC:0;
 --galCImg0Opacity:0; --galCImg1Opacity:0; --galCImg2Opacity:0; --galCImg3Opacity:0; --galCImg4Opacity:0; --galCImg5Opacity:0;
 --galCReady:0;
-/* S11 (left text / right image) */
+/* S11 */
 --s11:0; --s11Overlay:0; --s11Y:0px; --s11ImgOpacity:0;
-/* S12 (full bleed) */
+/* S12 */
 --s12:0; --s12ImgOpacity:0; --s12Scale:1; --s12Ready:0;
-/* S13 (like S1) */
+/* S13 */
 --s13:0; --s13Overlay:0; --s13Y:0px; --s13ImgOpacity:0;
-/* S14 (like S2) */
+/* S14 */
 --s14:0; --s14Overlay:0; --s14Y:0px; --s14ImgOpacity:0;
-/* S15 (full bleed + centered overlay) */
+/* S15 */
 --s15:0; --s15Overlay:0; --s15Y:0px; --s15ImgOpacity:0; --s15Scale:1; --s15Ready:0;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (RTL ADAPTED) ===== */
 .hero-fixed{
 position:fixed; inset:0; z-index:3;
 opacity:var(--heroAlpha);
@@ -165,14 +140,36 @@ background:url("assets/hero1gc.jpg") center/cover no-repeat;
 opacity:0; animation:heroIn 900ms ease-out forwards; pointer-events:none;
 }
 @keyframes heroIn{ from{opacity:0} to{opacity:1} }
+
 .hero-media{
-position:absolute; top:96px; bottom:96px; left:96px; right:82px;
-display:flex; align-items:flex-end; justify-content:flex-start; overflow:hidden;
+position:absolute;
+top:96px; bottom:96px;
+/* RTL SWAP: Right becomes 96px (start), Left becomes 82px (end) */
+right:96px; left:82px;
+display:flex; align-items:flex-end;
+/* In RTL, flex-start is logically the Right side, so this naturally works */
+justify-content:flex-start;
+overflow:hidden;
 }
+
 .col{ position:relative; max-width:700px; transform:translateY(var(--shift)); will-change:transform; }
-.hero-title{ margin:0 0 24px 0; font-weight:400; font-size:100px; line-height:100px; opacity:var(--titleOpacity); }
+
+.hero-title{
+margin:0 0 24px 0; font-weight:400; font-size:100px; line-height:100px;
+opacity:var(--titleOpacity);
+/* Ensure RTL alignment */
+text-align: right;
+}
 .hero-title .line{ display:block; }
-.hero-links{ display:flex; flex-direction:column; gap:10px; font-size:24px; line-height:30px; opacity:var(--linksOpacity); }
+
+.hero-links{
+display:flex; flex-direction:column; gap:10px;
+font-size:24px; line-height:30px;
+opacity:var(--linksOpacity);
+/* Ensure RTL alignment */
+text-align: right;
+align-items: flex-start; /* Aligns to the right in RTL flex container */
+}
 .hero-links a{ color:#fff; text-decoration:none; transition:color .2s ease; }
 .hero-links a:hover,.hero-links a:focus-visible{ color:#00A86B; }
 .driver{ height:200vh; }
@@ -185,27 +182,35 @@ display:flex; align-items:center; justify-content:center; overflow:hidden;
 }
 .frame img{ width:100%; height:100%; object-fit:contain; display:block; }
 
-/* S1 image RIGHT (text left) */
+/*
+   RTL LOGIC FOR FRAMES:
+   Standard Rail (S1, S4, S9, S11, S13) now implies TEXT on RIGHT.
+   Therefore, IMAGE must be on LEFT.
+   Left Gap = 82px.
+   Right Gap = 96px (Margin) + 460px (Rail) + 96px (Gutter).
+*/
+
+/* S1 image LEFT (text right) */
 .s1-frame{
 top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
+left: 82px;
+right: calc(96px + 460px + 96px);
 opacity: var(--s1ImgOpacity);
 }
 
-/* S2 image LEFT (mirror) */
+/* S2 image RIGHT (text left - mirror) */
 .s2-frame{
 top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
+right: 96px;
+left: calc(82px + 96px + 460px);
 opacity: var(--s2ImgOpacity);
 }
 
-/* gallery-A-Left (right media area) */
+/* gallery-A-Left (Media on LEFT in RTL, Text Rail on Right) */
 .galA-left-frame{
 top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
+left: 82px;
+right: calc(96px + 460px + 96px);
 display:block;
 }
 .galA-left-frame img{
@@ -229,25 +234,26 @@ transform-origin: center center;
 will-change: transform;
 }
 
-/* S4 image RIGHT */
+/* S4 image LEFT (like S1) */
 .s4-frame{
 top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
+left: 82px;
+right: calc(96px + 460px + 96px);
 opacity: var(--s4ImgOpacity);
 }
 
-/* S5 image LEFT */
+/* S5 image RIGHT (like S2) */
 .s5-frame{
 top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
+right: 96px;
+left: calc(82px + 96px + 460px);
 opacity: var(--s5ImgOpacity);
 }
 
-/* gallery-B-Center (center media area) */
+/* gallery-B-Center (center media area) - Adjusted margins for RTL logic */
 .galB-center-frame{
-top:96px; bottom:96px; left:96px; right:82px;
+top:96px; bottom:96px;
+right: 96px; left: 82px;
 display:block;
 }
 .galB-center-frame img{
@@ -272,19 +278,19 @@ transform-origin: center center;
 will-change: transform;
 }
 
-/* S9 image RIGHT (like S1/S4) */
+/* S9 image LEFT (like S1) */
 .s9-frame{
 top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
+left: 82px;
+right: calc(96px + 460px + 96px);
 opacity: var(--s9ImgOpacity);
 }
 
-/* gallery-C-Right (media on LEFT, no text) */
+/* gallery-C-Right (Media on RIGHT, Text on Left - Mirror Style) */
 .galC-left-frame{
 top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
+right: 96px;
+left: calc(82px + 96px + 460px);
 display:block;
 }
 .galC-left-frame img{
@@ -300,11 +306,11 @@ will-change:opacity;
 #galC-img4{ opacity: var(--galCImg4Opacity); }
 #galC-img5{ opacity: var(--galCImg5Opacity); }
 
-/* S11 image RIGHT (like S1/S4/S9) */
+/* S11 image LEFT (like S1) */
 .s11-frame{
 top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
+left: 82px;
+right: calc(96px + 460px + 96px);
 opacity: var(--s11ImgOpacity);
 }
 
@@ -318,19 +324,19 @@ transform-origin: center center;
 will-change: transform;
 }
 
-/* S13 image RIGHT (like S1) */
+/* S13 image LEFT (like S1) */
 .s13-frame{
 top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
+left: 82px;
+right: calc(96px + 460px + 96px);
 opacity: var(--s13ImgOpacity);
 }
 
-/* S14 image LEFT (like S2) */
+/* S14 image RIGHT (like S2) */
 .s14-frame{
 top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
+right: 96px;
+left: calc(82px + 96px + 460px);
 opacity: var(--s14ImgOpacity);
 }
 
@@ -352,7 +358,8 @@ position:relative; height:280vh; background:#eaeeec;
 }
 
 /* ===== TEXT OVERLAYS (rails) ===== */
-.s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay, .s9-overlay, .s11-overlay, .s13-overlay, .s14-overlay, .s15-overlay{
+.s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay, .s9-overlay, .s11-overlay,
+.s13-overlay, .s14-overlay, .s15-overlay{
 position:fixed; inset:0; z-index:2; pointer-events:none;
 }
 .s1-overlay{ opacity:var(--s1Overlay); }
@@ -365,29 +372,35 @@ position:fixed; inset:0; z-index:2; pointer-events:none;
 .s14-overlay{ opacity:var(--s14Overlay); }
 .s15-overlay{ opacity:var(--s15Overlay); }
 
-/* LEFT rails (text left) */
+/* RTL RAILS SWAP */
+
+/* "LEFT" rails now move to the RIGHT (Start) */
 .s1-rail, .s4-rail, .s9-rail, .s11-rail, .s13-rail{
-position:absolute; top:0; bottom:0; left:96px; width:460px; overflow:hidden;
+position:absolute; top:0; bottom:0;
+right:96px; left: auto;
+width:460px; overflow:hidden;
 }
 
-/* RIGHT rails (text right) */
+/* "RIGHT" rails now move to the LEFT (End) */
 .s2-rail, .s5-rail, .s14-rail{
-position:absolute; top:0; bottom:0; right:96px; width:460px; overflow:hidden;
+position:absolute; top:0; bottom:0;
+left:96px; right: auto;
+width:460px; overflow:hidden;
 }
 
-.s1-text{ transform:translateY(var(--s1Y)); color:#111; }
-.s2-text{ transform:translateY(var(--s2Y)); color:#111; text-align:left; }
-.s4-text{ transform:translateY(var(--s4Y)); color:#111; }
-.s5-text{ transform:translateY(var(--s5Y)); color:#111; text-align:left; }
-.s9-text{ transform:translateY(var(--s9Y)); color:#111; }
-.s11-text{ transform:translateY(var(--s11Y)); color:#111; }
-.s13-text{ transform:translateY(var(--s13Y)); color:#111; }
-.s14-text{ transform:translateY(var(--s14Y)); color:#111; text-align:left; }
+.s1-text{ transform:translateY(var(--s1Y)); color:#111; text-align:right; }
+.s2-text{ transform:translateY(var(--s2Y)); color:#111; text-align:left; /* Mirror align */ }
+.s4-text{ transform:translateY(var(--s4Y)); color:#111; text-align:right; }
+.s5-text{ transform:translateY(var(--s5Y)); color:#111; text-align:left; /* Mirror align */ }
+.s9-text{ transform:translateY(var(--s9Y)); color:#111; text-align:right; }
+.s11-text{ transform:translateY(var(--s11Y)); color:#111; text-align:right; }
+.s13-text{ transform:translateY(var(--s13Y)); color:#111; text-align:right; }
+.s14-text{ transform:translateY(var(--s14Y)); color:#111; text-align:left; /* Mirror align */ }
 
-/* ===== S15: CENTER COLUMN OVERLAY (centered text) ===== */
+/* ===== S15: CENTER COLUMN OVERLAY ===== */
 .s15-rail{
 position:absolute; top:0; bottom:0;
-left:50%; transform:translateX(-50%);
+left:50%; transform:translateX(-50%); /* Centering remains valid in RTL */
 width:700px; max-width:calc(100vw - 96px - 82px);
 overflow:hidden;
 }
@@ -395,171 +408,106 @@ overflow:hidden;
 transform:translateY(var(--s15Y));
 color:#fff; text-align:center;
 }
-.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p, .s11-text p, .s13-text p, .s14-text p, .s15-text p{
+.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
+.s11-text p, .s13-text p, .s14-text p, .s15-text p{
 margin:0 0 14px 0; font-size:20px; line-height:28px;
 }
 .after{ min-height:120vh; }
 
-/* ===== PATCH: Enable S15 links only in S15 ===== */
-.s15-overlay{
-z-index:3;
-pointer-events:none;
-}
-.s15-overlay[style*="opacity: 1"] {
-pointer-events:auto;
-}
-.s15-text{
-position:relative;
-z-index:4;
-pointer-events:auto;
-}
+/* ===== PATCH: Enable S15 links ===== */
+.s15-overlay{ z-index:3; pointer-events:none; }
+.s15-overlay[style*="opacity: 1"] { pointer-events:auto; }
+.s15-text{ position:relative; z-index:4; pointer-events:auto; }
 .s15-text a{
-color:#fff;
-text-decoration:none;
-transition:color .2s ease;
-position:relative;
-z-index:5;
+color:#fff; text-decoration:none; transition:color .2s ease;
+position:relative; z-index:5;
 }
-.s15-text a:hover,
-.s15-text a:focus-visible{
-color:#00A86B;
-}
+.s15-text a:hover, .s15-text a:focus-visible{ color:#00A86B; }
+
 /*
 =====================================================
-    MOBILE RESPONSIVE (max-width:600px) - DEDICATED MOBILE VIEW
-    (Your original working mobile code)
+MOBILE RESPONSIVE (max-width:600px)
 =====================================================
 */
 @media (max-width:600px){
-body {
-margin:0;
-padding:0;
-background:#eaeeec;
-}
+body { margin:0; padding:0; background:#eaeeec; text-align: center; }
 
-/* ==== HERO (No changes) ==== */
-.hero-media {
-top:20px; bottom:20px; left:20px; right:20px;
-}
-.hero-title {
-font-size:72px;
-line-height:1.05;
-}
+/* ==== HERO ==== */
+.hero-media { top:20px; bottom:20px; left:20px; right:20px; }
+.hero-title { font-size:72px; line-height:1.05; text-align: center; }
 .hero-links {
-font-size:20px;
-line-height:26px;
+font-size:20px; line-height:26px;
+text-align: center; align-items: center;
 }
 
-/* ==== SECTION WRAPS (No changes) ==== */
+/* ==== SECTION WRAPS ==== */
 .s1-wrap, .s2-wrap, .s4-wrap, .s5-wrap,
 .s9-wrap, .s11-wrap, .s13-wrap, .s14-wrap {
-position:relative;
-min-height:200vh;
-background:#eaeeec;
+position:relative; min-height:200vh; background:#eaeeec;
 }
 
-/* ==== SECTION IMAGES (No changes) ==== */
+/* ==== SECTION IMAGES ==== */
 .s1-frame, .s2-frame, .s4-frame, .s5-frame,
 .s9-frame, .s11-frame, .s13-frame, .s14-frame {
 position:fixed;
 top:20px; bottom:20px; left:20px; right:20px;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:1;
-pointer-events:none;
+display:flex; align-items:center; justify-content:center;
+z-index:1; pointer-events:none;
 }
 .s1-frame img, .s2-frame img, .s4-frame img, .s5-frame img,
 .s9-frame img, .s11-frame img, .s13-frame img, .s14-frame img {
-width:100%;
-height:auto;
-object-fit:contain;
-display:block;
+width:100%; height:auto; object-fit:contain; display:block;
 }
 
-/* ==== TEXT OVERLAY (Base Structure & BACKGROUND) ==== */
+/* ==== TEXT OVERLAY ==== */
 .s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay,
 .s9-overlay, .s11-overlay, .s13-overlay, .s14-overlay, .s15-overlay {
-position:relative !important;
-opacity:1 !important;
-pointer-events:auto !important;
-transform:none !important;
-padding:0 20px 80px; /* Base padding */
-max-width:100% !important; /* Full width */
-margin:0 auto;
-background:#eaeeec !important; /* Base background for S1-S14 */
-z-index:2;
+position:relative !important; opacity:1 !important;
+pointer-events:auto !important; transform:none !important;
+padding:0 20px 80px; max-width:100% !important;
+margin:0 auto; background:#eaeeec !important; z-index:2;
 }
 
-/* S15 Overlay Overrides */
 .s15-overlay {
-    background: transparent !important; 
-    max-width: 100% !important; 
-    padding: 80px 20px 80px !important; /* 80px Top/Bottom, 20px Left/Right */
-    margin: 0 auto !important;
-    position: relative !important; 
-    z-index: 5 !important; 
+background: transparent !important;
+padding: 80px 20px 80px !important;
+z-index: 5 !important;
 }
 
-/* S15 Rail Structural Reset */
+/* Reset Rails for Mobile (Center) */
 .s1-rail, .s2-rail, .s4-rail, .s5-rail,
 .s9-rail, .s11-rail, .s13-rail, .s14-rail, .s15-rail {
-    position:relative !important;
-    width:100% !important;
-    margin:0 !important;
-    left:auto !important;
-    right:auto !important;
-    transform: none !important;
+position:relative !important; width:100% !important; margin:0 !important;
+left:auto !important; right:auto !important; transform: none !important;
 }
-.s15-rail {
-    left: 0 !important;
-    right: 0 !important;
-    transform: none !important;
-    margin: 0 auto !important;
-}
+.s15-rail { margin: 0 auto !important; }
 
-
-/* ==== TEXT (Margins & Color) ==== */
+/* Reset Text Alignment for Mobile */
 .s1-text, .s2-text, .s4-text, .s5-text,
 .s9-text, .s11-text, .s13-text, .s14-text, .s15-text {
-transform:none !important;
-color:#111;
-text-align:left;
-font-size:18px;
-line-height:26px;
-margin:80px 0 80px 0; 
+transform:none !important; color:#111;
+/* In mobile, we usually center or keep RTL standard */
+text-align:center !important;
+font-size:18px; line-height:26px;
+margin:80px 0 80px 0;
 }
 
-/* S15 Text and Link Styling */
 .s15-text {
-    color:#fff !important; 
-    text-align:center !important; 
-    padding:0 !important;
-    margin: 80px auto 80px auto !important; 
-    max-width: 100% !important;
-    width: 100% !important;
-    
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+color:#fff !important; text-align:center !important; padding:0 !important;
+margin: 80px auto 80px auto !important;
+max-width: 100% !important; width: 100% !important;
+position: relative !important; left: 50% !important;
+transform: translateX(-50%) !important;
 }
 
-/* S15 Link Fixes */
 .s15-text a {
-    color:#fff !important; 
-    text-decoration: none !important;
-    transition: color .2s ease; 
-    display: inline-block !important; 
-    position: relative !important; 
-    z-index: 100 !important; 
+color:#fff !important; text-decoration: none !important;
+transition: color .2s ease; display: inline-block !important;
+position: relative !important; z-index: 100 !important;
 }
-.s15-text a:hover, .s15-text a:focus, .s15-text a:focus-visible, .s15-text a:active { 
-    color: #00A86B !important; 
-    opacity: 1 !important; 
-}
+.s15-text a:hover, .s15-text a:focus { color: #00A86B !important; opacity: 1 !important; }
 
-
-/* ==== GALLERIES & FULL BLEEDS (No changes) ==== */
+/* ==== GALLERIES ==== */
 .galA-left-frame, .galB-center-frame, .galC-left-frame {
 left:20px; right:20px;
 }
@@ -567,100 +515,70 @@ left:20px; right:20px;
 left:0; right:0; top:0; bottom:0;
 }
 }
+
 /*
 =====================================================
-    TABLET RESPONSIVE (min-width:601px and max-width:1023px) - FINAL FIXES + DYNAMIC HERO TEXT
+TABLET RESPONSIVE (min-width:601px and max-width:1023px)
 =====================================================
 */
 @media (min-width:601px) and (max-width:1023px) {
 
-/* Hero Text Scaling (New Addition) */
 .hero-title {
-    /* Clamps font size between 80px (at 601px width) and 100px (at 1023px width) */
-    font-size: clamp(80px, 12vw, 100px) !important;
-    line-height: 1.05 !important;
-}
-/* Hero Text Scaling (Updated Addition) */
-.hero-title {
-    /* Title remains Dynamic and scales smoothly */
-    font-size: clamp(80px, 12vw, 100px) !important;
-    line-height: 1.05 !important;
+font-size: clamp(80px, 12vw, 100px) !important;
+line-height: 1.05 !important;
 }
 .hero-links {
-    /* Links are now Static (Fixed Jump) for predictability */
-    font-size: 24px !important; 
-    line-height: 28px !important; 
+font-size: 24px !important; line-height: 28px !important;
 }
 
-/* Structural & Containment Fixes (From previous successful steps) */
-
-/* 1. Ensure sections are scrollable and have background */
 .s1-wrap, .s2-wrap, .s4-wrap, .s5-wrap,
 .s9-wrap, .s11-wrap, .s13-wrap, .s14-wrap {
-    min-height: 200vh !important; 
-    background: #eaeeec !important;
+min-height: 200vh !important; background: #eaeeec !important;
 }
 
-/* 2. Base content wrappers are restricted and centered (Text/Overlay Column) */
 .s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay,
 .s9-overlay, .s11-overlay, .s13-overlay, .s14-overlay, .s15-overlay {
-    max-width: 600px !important; 
-    padding:0 !important; 
-    margin:0 auto !important; 
-    background:#eaeeec !important; 
-    position: relative !important; 
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: none !important;
+max-width: 600px !important; padding:0 !important;
+margin:0 auto !important; background:#eaeeec !important;
+position: relative !important; opacity: 1 !important;
+pointer-events: auto !important; transform: none !important;
 }
 .s15-overlay {
-    background: transparent !important; 
-    padding: 80px 0 80px 0 !important;
-    z-index: 5 !important;
+background: transparent !important; padding: 80px 0 80px 0 !important; z-index: 5 !important;
 }
 
-/* 3. Section Images - Constrain them to the 600px column */
+/* Section Images - Constrain to 600px column */
 .s1-frame, .s2-frame, .s4-frame, .s5-frame,
 .s9-frame, .s11-frame, .s13-frame, .s14-frame {
-    position: absolute !important; 
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 600px !important; 
-    margin: 0 auto !important;
-    top: 0 !important;
-    bottom: 0 !important; 
-    padding: 20px !important; 
+position: absolute !important;
+left: 50% !important; transform: translateX(-50%) !important;
+right: auto !important; /* Reset RTL specific right */
+width: 600px !important; margin: 0 auto !important;
+top: 0 !important; bottom: 0 !important; padding: 20px !important;
 }
 
-/* 4. Text Rail and Inner Text */
 .s1-text, .s2-text, .s4-text, .s5-text,
 .s9-text, .s11-text, .s13-text, .s14-text, .s15-text {
-    padding: 0 20px !important; 
-    margin: 80px auto 80px auto !important; 
-    left: auto !important;
-    transform: none !important;
-    max-width: 100% !important;
-    width: auto !important;
-    text-align: left !important;
+padding: 0 20px !important;
+margin: 80px auto 80px auto !important;
+left: auto !important; right: auto !important;
+transform: none !important;
+max-width: 100% !important; width: auto !important;
+text-align: right !important; /* Force RTL alignment on tablet */
 }
 
-/* S15 Text (Centering Fix) */
 .s15-text {
-    text-align: center !important;
-    color: #fff !important;
-    left: 50% !important; 
-    transform: translateX(-50%) !important;
+text-align: center !important; color: #fff !important;
+left: 50% !important; transform: translateX(-50%) !important;
 }
 
-/* 5. Gallery Frames: Constrain them to the 600px column (for future proofing) */
 .galA-left-frame, .galB-center-frame, .galC-left-frame {
-    width: 600px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    padding: 0 20px !important;
+width: 600px !important;
+left: 50% !important; transform: translateX(-50%) !important;
+right: auto !important;
+padding: 0 20px !important;
 }
 }
-
 </style>
 </head>
 <body>
@@ -745,7 +663,13 @@ left:0; right:0; top:0; bottom:0;
 <p>After we opened the windows to let the spirits out…</p>
 <p>After we lit incense stick after incense stick…</p>
 <p>After we watched MMA fighters on TV in the basement…</p>
-<p>And the smoke kept rising. The chain must not be broken. **\*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius, metus nec tincidunt tincidunt, nunc erat tincidunt sapien, vel laoreet lacus nisi eget justo. Nullam ut placerat odio. Nulla vitae eros nec mi rutrum eleifend at nec dui. Duis ultricies consequat lobortis. Fusce a aliquam lorem, ac lacinia est. Praesent rutrum odio eget tellus mattis, at malesuada lorem dapibus. Pellentesque accumsan dui a lectus porttitor vestibulum. Nam venenatis urna elit, at condimentum eros elementum interdum. Proin sed semper nulla. Mauris placerat non dui at pretium. Ut aliquam tellus ipsum, non porta ex congue a. Vestibulum molestie egestas tellus, vitae tincidunt nibh mollis nec.
+<p>And the smoke kept rising. The chain must not be broken. **\*Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Aliquam varius, metus nec tincidunt tincidunt, nunc erat tincidunt sapien, vel laoreet lacus nisi eget justo. Nullam ut placerat odio.
+Nulla vitae eros nec mi rutrum eleifend at nec dui. Duis ultricies consequat lobortis.
+Fusce a aliquam lorem, ac lacinia est. Praesent rutrum odio eget tellus mattis, at malesuada lorem dapibus.
+Pellentesque accumsan dui a lectus porttitor vestibulum. Nam venenatis urna elit, at condimentum eros elementum interdum. Proin sed semper nulla.
+Mauris placerat non dui at pretium. Ut aliquam tellus ipsum, non porta ex congue a.
+Vestibulum molestie egestas tellus, vitae tincidunt nibh mollis nec.
 Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non turpis. **\*</p>
 </div>
 </div>
@@ -759,7 +683,13 @@ Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non
 <p>Now the perspective widens to a new frame…</p>
 <p>The city’s edge meets the garden…</p>
 <p>We follow the lines of growth and care…</p>
-<p>And learn how places hold time. **\*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius, metus nec tincidunt tincidunt, nunc erat tincidunt sapien, vel laoreet lacus nisi eget justo. Nullam ut placerat odio. Nulla vitae eros nec mi rutrum eleifend at nec dui. Duis ultricies consequat lobortis. Fusce a aliquam lorem, ac lacinia est. Praesent rutrum odio eget tellus mattis, at malesuada lorem dapibus. Pellentesque accumsan dui a lectus porttitor vestibulum. Nam venenatis urna elit, at condimentum eros elementum interdum. Proin sed semper nulla. Mauris placerat non dui at pretium. Ut aliquam tellus ipsum, non porta ex congue a. Vestibulum molestie egestas tellus, vitae tincidunt nibh mollis nec.
+<p>And learn how places hold time. **\*Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Aliquam varius, metus nec tincidunt tincidunt, nunc erat tincidunt sapien, vel laoreet lacus nisi eget justo. Nullam ut placerat odio.
+Nulla vitae eros nec mi rutrum eleifend at nec dui. Duis ultricies consequat lobortis.
+Fusce a aliquam lorem, ac lacinia est. Praesent rutrum odio eget tellus mattis, at malesuada lorem dapibus.
+Pellentesque accumsan dui a lectus porttitor vestibulum. Nam venenatis urna elit, at condimentum eros elementum interdum. Proin sed semper nulla.
+Mauris placerat non dui at pretium. Ut aliquam tellus ipsum, non porta ex congue a.
+Vestibulum molestie egestas tellus, vitae tincidunt nibh mollis nec.
 Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non turpis. **\*</p>
 </div>
 </div>
@@ -862,7 +792,8 @@ Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non
 <p><strong>Gardenicity</strong> Writing, Design, Curation:<br>
 Megama/Rebecca Sternberg, Keren Avni</p>
 <p><strong>Photo Credits:</strong><br>
-1 - Survey of Israel (MAPI); 2-10, 15-25 - Matson (G. Eric and Edith) Photograph Collection, LOC; 11-14 - NLI Boris Carmi; 26 - Tomer Appelbaum</p>
+1 - Survey of Israel (MAPI); 2-10, 15-25 - Matson (G. Eric and Edith) Photograph Collection, LOC;
+11-14 - NLI Boris Carmi; 26 - Tomer Appelbaum</p>
 <p>
 <a href="https://www.megama.net" target="_blank">Gardencity what did Geddes See?</a><br>
 <a href="https://www.megama.net" target="_blank">Civic Green</a><br>
@@ -1268,1178 +1199,4 @@ init();
 </script>
 </body>
 </html>
-Final - Scrolly - Gardenicity What did Geddes See
-
-<!doctype html>
-<html lang="en" data-baseline="stable-2025-10-01__rails-460px__galC-6-only">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Gardenicity — Hero → S1 → S2 → gallery-A-Left → S3 → S4 → S5 → gallery-B-Center → S8 → S9 → gallery-C-Right → S11 → S12 → S13 → S14 → S15</title>
-<style>
-
-/* ===== Base ===== */
-html,body{
-margin:0; padding:0; height:100%;
-background:#eaeeec; color:#fff;
-font-family:"Acumin Pro",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-}
-:root{
-/* HERO */
---shift:0px; --titleOpacity:0; --linksOpacity:0; --heroAlpha:1; --heroBlur:0;
-/* S1 */
---s1:0; --s1Overlay:0; --s1Y:0px; --s1ImgOpacity:0;
-/* S2 */
---s2:0; --s2Overlay:0; --s2Y:0px; --s2ImgOpacity:0;
-/* gallery-A-Left */
---galA:0;
---galAImg0Opacity:0; --galAImg1Opacity:0; --galAImg2Opacity:0; --galAImg3Opacity:0;
---galAReady:0;
-/* S3 (full bleed) */
---s3:0; --s3ImgOpacity:0; --s3Scale:1;
-/* S4 */
---s4:0; --s4Overlay:0; --s4Y:0px; --s4ImgOpacity:0;
-/* S5 */
---s5:0; --s5Overlay:0; --s5Y:0px; --s5ImgOpacity:0;
-/* gallery-B-Center */
---galB:0;
---galBImg0Opacity:0; --galBImg1Opacity:0; --galBImg2Opacity:0; --galBImg3Opacity:0; --galBImg4Opacity:0;
---galBReady:0;
-/* S8 (full bleed) */
---s8:0; --s8ImgOpacity:0; --s8Scale:1; --s8Ready:0;
-/* S9 */
---s9:0; --s9Overlay:0; --s9Y:0px; --s9ImgOpacity:0;
-/* gallery-C-Right (media left, no text) */
---galC:0;
---galCImg0Opacity:0; --galCImg1Opacity:0; --galCImg2Opacity:0; --galCImg3Opacity:0; --galCImg4Opacity:0; --galCImg5Opacity:0;
---galCReady:0;
-/* S11 (left text / right image) */
---s11:0; --s11Overlay:0; --s11Y:0px; --s11ImgOpacity:0;
-/* S12 (full bleed) */
---s12:0; --s12ImgOpacity:0; --s12Scale:1; --s12Ready:0;
-/* S13 (like S1) */
---s13:0; --s13Overlay:0; --s13Y:0px; --s13ImgOpacity:0;
-/* S14 (like S2) */
---s14:0; --s14Overlay:0; --s14Y:0px; --s14ImgOpacity:0;
-/* S15 (full bleed + centered overlay) */
---s15:0; --s15Overlay:0; --s15Y:0px; --s15ImgOpacity:0; --s15Scale:1; --s15Ready:0;
-}
-
-/* ===== HERO ===== */
-.hero-fixed{
-position:fixed; inset:0; z-index:3;
-opacity:var(--heroAlpha);
-filter:blur(calc(var(--heroBlur)*10px));
-pointer-events:auto; will-change:opacity,filter;
-}
-.hero-bg{
-position:absolute; inset:0;
-background:url("assets/hero1gc.jpg") center/cover no-repeat;
-opacity:0; animation:heroIn 900ms ease-out forwards; pointer-events:none;
-}
-@keyframes heroIn{ from{opacity:0} to{opacity:1} }
-.hero-media{
-position:absolute; top:96px; bottom:96px; left:96px; right:82px;
-display:flex; align-items:flex-end; justify-content:flex-start; overflow:hidden;
-}
-.col{ position:relative; max-width:700px; transform:translateY(var(--shift)); will-change:transform; }
-.hero-title{ margin:0 0 24px 0; font-weight:400; font-size:100px; line-height:100px; opacity:var(--titleOpacity); }
-.hero-title .line{ display:block; }
-.hero-links{ display:flex; flex-direction:column; gap:10px; font-size:24px; line-height:30px; opacity:var(--linksOpacity); }
-.hero-links a{ color:#fff; text-decoration:none; transition:color .2s ease; }
-.hero-links a:hover,.hero-links a:focus-visible{ color:#00A86B; }
-.driver{ height:200vh; }
-
-/* ===== PINNED FRAMES ===== */
-figure.frame{ margin:0; }
-.frame{
-position:fixed; z-index:1; pointer-events:none;
-display:flex; align-items:center; justify-content:center; overflow:hidden;
-}
-.frame img{ width:100%; height:100%; object-fit:contain; display:block; }
-
-/* S1 image RIGHT (text left) */
-.s1-frame{
-top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
-opacity: var(--s1ImgOpacity);
-}
-
-/* S2 image LEFT (mirror) */
-.s2-frame{
-top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
-opacity: var(--s2ImgOpacity);
-}
-
-/* gallery-A-Left (right media area) */
-.galA-left-frame{
-top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
-display:block;
-}
-.galA-left-frame img{
-position:absolute; inset:0;
-width:100%; height:100%;
-object-fit:contain; object-position:center;
-will-change:opacity;
-}
-#galA-img0{ opacity: var(--galAImg0Opacity); }
-#galA-img1{ opacity: var(--galAImg1Opacity); }
-#galA-img2{ opacity: var(--galAImg2Opacity); }
-#galA-img3{ opacity: var(--galAImg3Opacity); }
-
-/* S3 full-bleed */
-.s3-frame{ top:0; right:0; bottom:0; left:0; opacity:var(--s3ImgOpacity); }
-.frame.s3-frame>img{
-width:100%; height:100%;
-object-fit:cover !important; object-position:center;
-transform: scale(var(--s3Scale));
-transform-origin: center center;
-will-change: transform;
-}
-
-/* S4 image RIGHT */
-.s4-frame{
-top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
-opacity: var(--s4ImgOpacity);
-}
-
-/* S5 image LEFT */
-.s5-frame{
-top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
-opacity: var(--s5ImgOpacity);
-}
-
-/* gallery-B-Center (center media area) */
-.galB-center-frame{
-top:96px; bottom:96px; left:96px; right:82px;
-display:block;
-}
-.galB-center-frame img{
-position:absolute; inset:0;
-width:100%; height:100%;
-object-fit:contain; object-position:center;
-will-change:opacity;
-}
-#galB-img0{ opacity: var(--galBImg0Opacity); }
-#galB-img1{ opacity: var(--galBImg1Opacity); }
-#galB-img2{ opacity: var(--galBImg2Opacity); }
-#galB-img3{ opacity: var(--galBImg3Opacity); }
-#galB-img4{ opacity: var(--galBImg4Opacity); }
-
-/* S8 full-bleed */
-.s8-frame{ top:0; right:0; bottom:0; left:0; opacity:var(--s8ImgOpacity); }
-.frame.s8-frame>img{
-width:100%; height:100%;
-object-fit:cover !important; object-position:center;
-transform: scale(var(--s8Scale));
-transform-origin: center center;
-will-change: transform;
-}
-
-/* S9 image RIGHT (like S1/S4) */
-.s9-frame{
-top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
-opacity: var(--s9ImgOpacity);
-}
-
-/* gallery-C-Right (media on LEFT, no text) */
-.galC-left-frame{
-top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
-display:block;
-}
-.galC-left-frame img{
-position:absolute; inset:0;
-width:100%; height:100%;
-object-fit:contain; object-position:center;
-will-change:opacity;
-}
-#galC-img0{ opacity: var(--galCImg0Opacity); }
-#galC-img1{ opacity: var(--galCImg1Opacity); }
-#galC-img2{ opacity: var(--galCImg2Opacity); }
-#galC-img3{ opacity: var(--galCImg3Opacity); }
-#galC-img4{ opacity: var(--galCImg4Opacity); }
-#galC-img5{ opacity: var(--galCImg5Opacity); }
-
-/* S11 image RIGHT (like S1/S4/S9) */
-.s11-frame{
-top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
-opacity: var(--s11ImgOpacity);
-}
-
-/* S12 full-bleed */
-.s12-frame{ top:0; right:0; bottom:0; left:0; opacity:var(--s12ImgOpacity); }
-.frame.s12-frame>img{
-width:100%; height:100%;
-object-fit:cover !important; object-position:center;
-transform: scale(var(--s12Scale));
-transform-origin: center center;
-will-change: transform;
-}
-
-/* S13 image RIGHT (like S1) */
-.s13-frame{
-top:96px; bottom:96px;
-left: calc(96px + 460px + 96px);
-right: 82px;
-opacity: var(--s13ImgOpacity);
-}
-
-/* S14 image LEFT (like S2) */
-.s14-frame{
-top:96px; bottom:96px;
-left: 96px;
-right: calc(82px + 96px + 460px);
-opacity: var(--s14ImgOpacity);
-}
-
-/* S15 full-bleed */
-.s15-frame{ top:0; right:0; bottom:0; left:0; opacity:var(--s15ImgOpacity); }
-.frame.s15-frame>img{
-width:100%; height:100%;
-object-fit:cover !important; object-position:center;
-transform: scale(var(--s15Scale));
-transform-origin: center center;
-will-change: transform;
-}
-
-/* ===== SECTION DRIVERS ===== */
-.s1-wrap, .s2-wrap, .galA-left-wrap, .s3-wrap, .s4-wrap, .s5-wrap,
-.galB-center-wrap, .s8-wrap, .s9-wrap, .galC-left-wrap, .s11-wrap, .s12-wrap,
-.s13-wrap, .s14-wrap, .s15-wrap{
-position:relative; height:280vh; background:#eaeeec;
-}
-
-/* ===== TEXT OVERLAYS (rails) ===== */
-.s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay, .s9-overlay, .s11-overlay, .s13-overlay, .s14-overlay, .s15-overlay{
-position:fixed; inset:0; z-index:2; pointer-events:none;
-}
-.s1-overlay{ opacity:var(--s1Overlay); }
-.s2-overlay{ opacity:var(--s2Overlay); }
-.s4-overlay{ opacity:var(--s4Overlay); }
-.s5-overlay{ opacity:var(--s5Overlay); }
-.s9-overlay{ opacity:var(--s9Overlay); }
-.s11-overlay{ opacity:var(--s11Overlay); }
-.s13-overlay{ opacity:var(--s13Overlay); }
-.s14-overlay{ opacity:var(--s14Overlay); }
-.s15-overlay{ opacity:var(--s15Overlay); }
-
-/* LEFT rails (text left) */
-.s1-rail, .s4-rail, .s9-rail, .s11-rail, .s13-rail{
-position:absolute; top:0; bottom:0; left:96px; width:460px; overflow:hidden;
-}
-
-/* RIGHT rails (text right) */
-.s2-rail, .s5-rail, .s14-rail{
-position:absolute; top:0; bottom:0; right:96px; width:460px; overflow:hidden;
-}
-
-.s1-text{ transform:translateY(var(--s1Y)); color:#111; }
-.s2-text{ transform:translateY(var(--s2Y)); color:#111; text-align:left; }
-.s4-text{ transform:translateY(var(--s4Y)); color:#111; }
-.s5-text{ transform:translateY(var(--s5Y)); color:#111; text-align:left; }
-.s9-text{ transform:translateY(var(--s9Y)); color:#111; }
-.s11-text{ transform:translateY(var(--s11Y)); color:#111; }
-.s13-text{ transform:translateY(var(--s13Y)); color:#111; }
-.s14-text{ transform:translateY(var(--s14Y)); color:#111; text-align:left; }
-
-/* ===== S15: CENTER COLUMN OVERLAY (centered text) ===== */
-.s15-rail{
-position:absolute; top:0; bottom:0;
-left:50%; transform:translateX(-50%);
-width:700px; max-width:calc(100vw - 96px - 82px);
-overflow:hidden;
-}
-.s15-text{
-transform:translateY(var(--s15Y));
-color:#fff; text-align:center;
-}
-.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p, .s11-text p, .s13-text p, .s14-text p, .s15-text p{
-margin:0 0 14px 0; font-size:20px; line-height:28px;
-}
-.after{ min-height:120vh; }
-
-/* ===== PATCH: Enable S15 links only in S15 ===== */
-.s15-overlay{
-z-index:3;
-pointer-events:none;
-}
-.s15-overlay[style*="opacity: 1"] {
-pointer-events:auto;
-}
-.s15-text{
-position:relative;
-z-index:4;
-pointer-events:auto;
-}
-.s15-text a{
-color:#fff;
-text-decoration:none;
-transition:color .2s ease;
-position:relative;
-z-index:5;
-}
-.s15-text a:hover,
-.s15-text a:focus-visible{
-color:#00A86B;
-}
-/*
-=====================================================
-    MOBILE RESPONSIVE (max-width:600px) - DEDICATED MOBILE VIEW
-    (Your original working mobile code)
-=====================================================
-*/
-@media (max-width:600px){
-body {
-margin:0;
-padding:0;
-background:#eaeeec;
-}
-
-/* ==== HERO (No changes) ==== */
-.hero-media {
-top:20px; bottom:20px; left:20px; right:20px;
-}
-.hero-title {
-font-size:72px;
-line-height:1.05;
-}
-.hero-links {
-font-size:20px;
-line-height:26px;
-}
-
-/* ==== SECTION WRAPS (No changes) ==== */
-.s1-wrap, .s2-wrap, .s4-wrap, .s5-wrap,
-.s9-wrap, .s11-wrap, .s13-wrap, .s14-wrap {
-position:relative;
-min-height:200vh;
-background:#eaeeec;
-}
-
-/* ==== SECTION IMAGES (No changes) ==== */
-.s1-frame, .s2-frame, .s4-frame, .s5-frame,
-.s9-frame, .s11-frame, .s13-frame, .s14-frame {
-position:fixed;
-top:20px; bottom:20px; left:20px; right:20px;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:1;
-pointer-events:none;
-}
-.s1-frame img, .s2-frame img, .s4-frame img, .s5-frame img,
-.s9-frame img, .s11-frame img, .s13-frame img, .s14-frame img {
-width:100%;
-height:auto;
-object-fit:contain;
-display:block;
-}
-
-/* ==== TEXT OVERLAY (Base Structure & BACKGROUND) ==== */
-.s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay,
-.s9-overlay, .s11-overlay, .s13-overlay, .s14-overlay, .s15-overlay {
-position:relative !important;
-opacity:1 !important;
-pointer-events:auto !important;
-transform:none !important;
-padding:0 20px 80px; /* Base padding */
-max-width:100% !important; /* Full width */
-margin:0 auto;
-background:#eaeeec !important; /* Base background for S1-S14 */
-z-index:2;
-}
-
-/* S15 Overlay Overrides */
-.s15-overlay {
-    background: transparent !important; 
-    max-width: 100% !important; 
-    padding: 80px 20px 80px !important; /* 80px Top/Bottom, 20px Left/Right */
-    margin: 0 auto !important;
-    position: relative !important; 
-    z-index: 5 !important; 
-}
-
-/* S15 Rail Structural Reset */
-.s1-rail, .s2-rail, .s4-rail, .s5-rail,
-.s9-rail, .s11-rail, .s13-rail, .s14-rail, .s15-rail {
-    position:relative !important;
-    width:100% !important;
-    margin:0 !important;
-    left:auto !important;
-    right:auto !important;
-    transform: none !important;
-}
-.s15-rail {
-    left: 0 !important;
-    right: 0 !important;
-    transform: none !important;
-    margin: 0 auto !important;
-}
-
-
-/* ==== TEXT (Margins & Color) ==== */
-.s1-text, .s2-text, .s4-text, .s5-text,
-.s9-text, .s11-text, .s13-text, .s14-text, .s15-text {
-transform:none !important;
-color:#111;
-text-align:left;
-font-size:18px;
-line-height:26px;
-margin:80px 0 80px 0; 
-}
-
-/* S15 Text and Link Styling */
-.s15-text {
-    color:#fff !important; 
-    text-align:center !important; 
-    padding:0 !important;
-    margin: 80px auto 80px auto !important; 
-    max-width: 100% !important;
-    width: 100% !important;
-    
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-}
-
-/* S15 Link Fixes */
-.s15-text a {
-    color:#fff !important; 
-    text-decoration: none !important;
-    transition: color .2s ease; 
-    display: inline-block !important; 
-    position: relative !important; 
-    z-index: 100 !important; 
-}
-.s15-text a:hover, .s15-text a:focus, .s15-text a:focus-visible, .s15-text a:active { 
-    color: #00A86B !important; 
-    opacity: 1 !important; 
-}
-
-
-/* ==== GALLERIES & FULL BLEEDS (No changes) ==== */
-.galA-left-frame, .galB-center-frame, .galC-left-frame {
-left:20px; right:20px;
-}
-.frame.s3-frame, .frame.s8-frame, .frame.s12-frame, .frame.s15-frame {
-left:0; right:0; top:0; bottom:0;
-}
-}
-/*
-=====================================================
-    TABLET RESPONSIVE (min-width:601px and max-width:1023px) - FINAL FIXES + DYNAMIC HERO TEXT
-=====================================================
-*/
-@media (min-width:601px) and (max-width:1023px) {
-
-/* Hero Text Scaling (New Addition) */
-.hero-title {
-    /* Clamps font size between 80px (at 601px width) and 100px (at 1023px width) */
-    font-size: clamp(80px, 12vw, 100px) !important;
-    line-height: 1.05 !important;
-}
-/* Hero Text Scaling (Updated Addition) */
-.hero-title {
-    /* Title remains Dynamic and scales smoothly */
-    font-size: clamp(80px, 12vw, 100px) !important;
-    line-height: 1.05 !important;
-}
-.hero-links {
-    /* Links are now Static (Fixed Jump) for predictability */
-    font-size: 24px !important; 
-    line-height: 28px !important; 
-}
-
-/* Structural & Containment Fixes (From previous successful steps) */
-
-/* 1. Ensure sections are scrollable and have background */
-.s1-wrap, .s2-wrap, .s4-wrap, .s5-wrap,
-.s9-wrap, .s11-wrap, .s13-wrap, .s14-wrap {
-    min-height: 200vh !important; 
-    background: #eaeeec !important;
-}
-
-/* 2. Base content wrappers are restricted and centered (Text/Overlay Column) */
-.s1-overlay, .s2-overlay, .s4-overlay, .s5-overlay,
-.s9-overlay, .s11-overlay, .s13-overlay, .s14-overlay, .s15-overlay {
-    max-width: 600px !important; 
-    padding:0 !important; 
-    margin:0 auto !important; 
-    background:#eaeeec !important; 
-    position: relative !important; 
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: none !important;
-}
-.s15-overlay {
-    background: transparent !important; 
-    padding: 80px 0 80px 0 !important;
-    z-index: 5 !important;
-}
-
-/* 3. Section Images - Constrain them to the 600px column */
-.s1-frame, .s2-frame, .s4-frame, .s5-frame,
-.s9-frame, .s11-frame, .s13-frame, .s14-frame {
-    position: absolute !important; 
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 600px !important; 
-    margin: 0 auto !important;
-    top: 0 !important;
-    bottom: 0 !important; 
-    padding: 20px !important; 
-}
-
-/* 4. Text Rail and Inner Text */
-.s1-text, .s2-text, .s4-text, .s5-text,
-.s9-text, .s11-text, .s13-text, .s14-text, .s15-text {
-    padding: 0 20px !important; 
-    margin: 80px auto 80px auto !important; 
-    left: auto !important;
-    transform: none !important;
-    max-width: 100% !important;
-    width: auto !important;
-    text-align: left !important;
-}
-
-/* S15 Text (Centering Fix) */
-.s15-text {
-    text-align: center !important;
-    color: #fff !important;
-    left: 50% !important; 
-    transform: translateX(-50%) !important;
-}
-
-/* 5. Gallery Frames: Constrain them to the 600px column (for future proofing) */
-.galA-left-frame, .galB-center-frame, .galC-left-frame {
-    width: 600px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    padding: 0 20px !important;
-}
-}
-
-</style>
-</head>
-<body>
-<div class="hero-fixed" id="hero">
-<div class="hero-bg" aria-hidden="true"></div>
-<div class="hero-media" id="hero-media">
-<div class="col" id="hero-col">
-<h1 class="hero-title" id="hero-title">
-<span class="line">Gardenicity</span>
-<span class="line">What did</span>
-<span class="line">Geddes see?</span>
-</h1>
-<nav class="hero-links" id="hero-links" aria-label="Primary">
-<a href="https://www.megama.net">Civic Green</a>
-<a href="https://www.megama.net">Growth</a>
-<a href="https://www.megama.net">Sustenance</a>
-<a href="https://www.megama.net">Leafy SDGs</a>
-<a href="https://www.megama.net">EN/עב</a>
-</nav>
-</div>
-</div>
-</div>
-
-<section class="driver" id="driver"></section>
-
-<figure class="frame s1-frame" aria-hidden="true"><img id="s1-img" src="assets/section1.jpg" alt=""></figure>
-<figure class="frame s2-frame" aria-hidden="true"><img id="s2-img" src="assets/section2.jpg" alt=""></figure>
-
-<figure class="frame galA-left-frame" aria-hidden="true">
-<img id="galA-img0" src="assets/gallery-A.jpg" alt="">
-<img id="galA-img1" src="assets/gallery-A1.jpg" alt="">
-<img id="galA-img2" src="assets/gallery-A2.jpg" alt="">
-<img id="galA-img3" src="assets/gallery-A3.jpg" alt="">
-</figure>
-
-<figure class="frame s3-frame" aria-hidden="true"><img id="s3-img" src="assets/section3.jpg" alt=""></figure>
-<figure class="frame s4-frame" aria-hidden="true"><img id="s4-img" src="assets/section4.jpg" alt=""></figure>
-<figure class="frame s5-frame" aria-hidden="true"><img id="s5-img" src="assets/section5.jpg" alt=""></figure>
-
-<figure class="frame galB-center-frame" aria-hidden="true">
-<img id="galB-img0" src="assets/gallery-B.jpg" alt="">
-<img id="galB-img1" src="assets/gallery-B1.jpg" alt="">
-<img id="galB-img2" src="assets/gallery-B2.jpg" alt="">
-<img id="galB-img3" src="assets/gallery-B3.jpg" alt="">
-<img id="galB-img4" src="assets/gallery-B4.jpg" alt="">
-</figure>
-
-<figure class="frame s8-frame" aria-hidden="true">
-<img id="s8-img" src="assets/section8.jpg" alt="">
-</figure>
-
-<figure class="frame s9-frame" aria-hidden="true"><img id="s9-img" src="assets/section9.jpg" alt=""></figure>
-
-<figure class="frame galC-left-frame" aria-hidden="true">
-<img id="galC-img0" src="assets/gallery-C.jpg" alt="">
-<img id="galC-img1" src="assets/gallery-C1.jpg" alt="">
-<img id="galC-img2" src="assets/gallery-C2.jpg" alt="">
-<img id="galC-img3" src="assets/gallery-C3.jpg" alt="">
-<img id="galC-img4" src="assets/gallery-C4.jpg" alt="">
-<img id="galC-img5" src="assets/gallery-C5.jpg" alt="">
-</figure>
-
-<figure class="frame s11-frame" aria-hidden="true"><img id="s11-img" src="assets/section11.jpg" alt=""></figure>
-
-<figure class="frame s12-frame" aria-hidden="true">
-<img id="s12-img" src="assets/section12.jpg" alt="">
-</figure>
-
-<figure class="frame s13-frame" aria-hidden="true"><img id="s13-img" src="assets/section13.jpg" alt=""></figure>
-
-<figure class="frame s14-frame" aria-hidden="true"><img id="s14-img" src="assets/section14.jpg" alt=""></figure>
-
-<figure class="frame s15-frame" aria-hidden="true">
-<img id="s15-img" src="assets/section15.jpg" alt="">
-</figure>
-
-<section class="s1-wrap" id="s1-wrap"></section>
-<div class="s1-overlay">
-<div class="s1-rail">
-<div class="s1-text" id="s1-text">
-<p><strong>HOURS AFTER MY</strong> mother took her last breath on earth…</p>
-<p>After we opened the windows to let the spirits out…</p>
-<p>After we lit incense stick after incense stick…</p>
-<p>After we watched MMA fighters on TV in the basement…</p>
-<p>And the smoke kept rising. The chain must not be broken. **\*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius, metus nec tincidunt tincidunt, nunc erat tincidunt sapien, vel laoreet lacus nisi eget justo. Nullam ut placerat odio. Nulla vitae eros nec mi rutrum eleifend at nec dui. Duis ultricies consequat lobortis. Fusce a aliquam lorem, ac lacinia est. Praesent rutrum odio eget tellus mattis, at malesuada lorem dapibus. Pellentesque accumsan dui a lectus porttitor vestibulum. Nam venenatis urna elit, at condimentum eros elementum interdum. Proin sed semper nulla. Mauris placerat non dui at pretium. Ut aliquam tellus ipsum, non porta ex congue a. Vestibulum molestie egestas tellus, vitae tincidunt nibh mollis nec.
-Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non turpis. **\*</p>
-</div>
-</div>
-</div>
-
-<section class="s2-wrap" id="s2-wrap"></section>
-<div class="s2-overlay">
-<div class="s2-rail">
-<div class="s2-text" id="s2-text">
-<p><strong>SECTION TWO</strong> opens as the previous memory fades…</p>
-<p>Now the perspective widens to a new frame…</p>
-<p>The city’s edge meets the garden…</p>
-<p>We follow the lines of growth and care…</p>
-<p>And learn how places hold time. **\*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius, metus nec tincidunt tincidunt, nunc erat tincidunt sapien, vel laoreet lacus nisi eget justo. Nullam ut placerat odio. Nulla vitae eros nec mi rutrum eleifend at nec dui. Duis ultricies consequat lobortis. Fusce a aliquam lorem, ac lacinia est. Praesent rutrum odio eget tellus mattis, at malesuada lorem dapibus. Pellentesque accumsan dui a lectus porttitor vestibulum. Nam venenatis urna elit, at condimentum eros elementum interdum. Proin sed semper nulla. Mauris placerat non dui at pretium. Ut aliquam tellus ipsum, non porta ex congue a. Vestibulum molestie egestas tellus, vitae tincidunt nibh mollis nec.
-Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non turpis. **\*</p>
-</div>
-</div>
-</div>
-
-<section class="galA-left-wrap" id="galA-wrap"></section>
-
-<section class="s3-wrap" id="s3-wrap"></section>
-
-<section class="s4-wrap" id="s4-wrap"></section>
-<div class="s4-overlay">
-<div class="s4-rail">
-<div class="s4-text" id="s4-text">
-<p><strong>SECTION FOUR</strong> returns to the tight frame…</p>
-<p>Left-rail narration continues the thread…</p>
-<p>The horizontal image sits steady at right…</p>
-<p>Margins and rhythm match Section One…</p>
-<p>And the cycle of views goes on.</p>
-</div>
-</div>
-</div>
-
-<section class="s5-wrap" id="s5-wrap"></section>
-<div class="s5-overlay">
-<div class="s5-rail">
-<div class="s5-text" id="s5-text">
-<p><strong>SECTION FIVE</strong> shifts the rail again…</p>
-<p>Now the narrative hugs the right margin…</p>
-<p>While the image holds the left field of view…</p>
-<p>Framing the next turn in the story…</p>
-<p>With the same cadence and pace.</p>
-</div>
-</div>
-</div>
-
-<section class="galB-center-wrap" id="galB-wrap"></section>
-
-<section class="s8-wrap" id="s8-wrap"></section>
-
-<section class="s9-wrap" id="s9-wrap"></section>
-<div class="s9-overlay">
-<div class="s9-rail">
-<div class="s9-text" id="s9-text">
-<p><strong>SECTION NINE</strong> brings us back to the close frame…</p>
-<p>The left rail carries the narration forward…</p>
-<p>On the right, the image steadies the scene…</p>
-<p>Margins, rhythm, and pacing mirror Section One…</p>
-<p>So the story breathes in familiar cadence.</p>
-</div>
-</div>
-</div>
-
-<section class="galC-left-wrap" id="galC-wrap"></section>
-
-<section class="s11-wrap" id="s11-wrap"></section>
-<div class="s11-overlay">
-<div class="s11-rail">
-<div class="s11-text" id="s11-text">
-<p><strong>SECTION ELEVEN</strong> continues the thread…</p>
-<p>Back to the left rail; image anchors the right…</p>
-<p>Margins and rhythm unchanged…</p>
-<p>Standard crossfades keep the cadence…</p>
-<p>As the story settles into focus.</p>
-</div>
-</div>
-</div>
-
-<section class="s12-wrap" id="s12-wrap"></section>
-
-<section class="s13-wrap" id="s13-wrap"></section>
-<div class="s13-overlay">
-<div class="s13-rail">
-<div class="s13-text" id="s13-text">
-<p><strong>SECTION THIRTEEN</strong> returns to the close frame…</p>
-<p>Left-rail narration pulls us forward…</p>
-<p>The right-side image steadies the scene…</p>
-<p>Margins and rhythm echo Section One…</p>
-<p>Breathing at the familiar pace.</p>
-</div>
-</div>
-</div>
-
-<section class="s14-wrap" id="s14-wrap"></section>
-<div class="s14-overlay">
-<div class="s14-rail">
-<div class="s14-text" id="s14-text">
-<p><strong>SECTION FOURTEEN</strong> flips the rail…</p>
-<p>Text to the right, image to the left…</p>
-<p>Pacing and fades match Section Two…</p>
-<p>As the view widens and settles…</p>
-<p>Into the next cadence.</p>
-</div>
-</div>
-</div>
-
-<section class="s15-wrap" id="s15-wrap"></section>
-<div class="s15-overlay">
-<div class="s15-rail">
-<div class="s15-text" id="s15-text">
-<p><strong>Gardenicity</strong> Writing, Design, Curation:<br>
-Megama/Rebecca Sternberg, Keren Avni</p>
-<p><strong>Photo Credits:</strong><br>
-1 - Survey of Israel (MAPI); 2-10, 15-25 - Matson (G. Eric and Edith) Photograph Collection, LOC; 11-14 - NLI Boris Carmi; 26 - Tomer Appelbaum</p>
-<p>
-<a href="https://www.megama.net" target="_blank">Gardencity what did Geddes See?</a><br>
-<a href="https://www.megama.net" target="_blank">Civic Green</a><br>
-<a href="https://www.megama.net" target="_blank">Growth</a><br>
-<a href="https://www.megama.net" target="_blank">Leafy SDGs</a><br>
-<a href="https://www.megama.net" target="_blank">EN/עב</a>
-</p>
-</div>
-</div>
-</div>
-
-<section class="after"></section>
-
-<script>
-(function(){
-const root=document.documentElement;
-const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-const easeInOutCubic=t=>t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
-const easePow=(t,p)=>Math.pow(t,p);
-
-/* ---------- HERO ---------- */
-const driver=document.getElementById('driver');
-const heroMedia=document.getElementById('hero-media');
-const heroCol=document.getElementById('hero-col');
-const heroTitle=document.getElementById('hero-title');
-const heroLinks=document.getElementById('hero-links');
-let startShift=0,endShift=0;
-
-function measureHero(){
-const prev=heroCol.style.transform;
-heroCol.style.transform='translateY(0px)';
-const lines=heroTitle.querySelectorAll('.line');
-const third=lines[2]||lines[lines.length-1];
-const thirdRect=third.getBoundingClientRect();
-const lastLinkRect=(heroLinks.lastElementChild||heroLinks).getBoundingClientRect();
-const mediaRect=heroMedia.getBoundingClientRect();
-const mediaBaseline=mediaRect.bottom;
-startShift=mediaBaseline-thirdRect.bottom;
-endShift=mediaBaseline-lastLinkRect.bottom;
-heroCol.style.transform=prev||'';
-root.style.setProperty('--shift',startShift.toFixed(1)+'px');
-}
-
-function progressOf(el){
-const r=el.getBoundingClientRect();
-const vh=window.innerHeight||document.documentElement.clientHeight;
-const total=r.height-vh;
-if(total<=0) return 0;
-return clamp(-r.top/total,0,1);
-}
-
-/* ---------- WRAPS ---------- */
-const s1Wrap=document.getElementById('s1-wrap');
-const s2Wrap=document.getElementById('s2-wrap');
-const galAWrap=document.getElementById('galA-wrap');
-const s3Wrap=document.getElementById('s3-wrap');
-const s4Wrap=document.getElementById('s4-wrap');
-const s5Wrap=document.getElementById('s5-wrap');
-const galBWrap=document.getElementById('galB-wrap');
-const s8Wrap=document.getElementById('s8-wrap');
-const s9Wrap=document.getElementById('s9-wrap');
-const galCWrap=document.getElementById('galC-wrap');
-const s11Wrap=document.getElementById('s11-wrap');
-const s12Wrap=document.getElementById('s12-wrap');
-const s13Wrap=document.getElementById('s13-wrap');
-const s14Wrap=document.getElementById('s14-wrap');
-const s15Wrap=document.getElementById('s15-wrap');
-
-const s1Text=document.getElementById('s1-text');
-const s2Text=document.getElementById('s2-text');
-const s4Text=document.getElementById('s4-text');
-const s5Text=document.getElementById('s5-text');
-const s9Text=document.getElementById('s9-text');
-const s11Text=document.getElementById('s11-text');
-const s13Text=document.getElementById('s13-text');
-const s14Text=document.getElementById('s14-text');
-const s15Text=document.getElementById('s15-text');
-
-let s1StartY=0, s1EndY=0;
-let s2StartY=0, s2EndY=0;
-let s4StartY=0, s4EndY=0;
-let s5StartY=0, s5EndY=0;
-let s9StartY=0, s9EndY=0;
-let s11StartY=0, s11EndY=0;
-let s13StartY=0, s13EndY=0;
-let s14StartY=0, s14EndY=0;
-let s15StartY=0, s15EndY=0;
-
-function measureS1(){ const vh=window.innerHeight; const h=s1Text.scrollHeight; s1StartY=vh; s1EndY=-h; root.style.setProperty('--s1Y', s1StartY+'px'); }
-function measureS2(){ const vh=window.innerHeight; const h=s2Text.scrollHeight; s2StartY=vh; s2EndY=-h; root.style.setProperty('--s2Y', s2StartY+'px'); }
-function measureS4(){ const vh=window.innerHeight; const h=s4Text.scrollHeight; s4StartY=vh; s4EndY=-h; root.style.setProperty('--s4Y', s4StartY+'px'); }
-function measureS5(){ const vh=window.innerHeight; const h=s5Text.scrollHeight; s5StartY=vh; s5EndY=-h; root.style.setProperty('--s5Y', s5StartY+'px'); }
-function measureS9(){ const vh=window.innerHeight; const h=s9Text.scrollHeight; s9StartY=vh; s9EndY=-h; root.style.setProperty('--s9Y', s9StartY+'px'); }
-function measureS11(){ const vh=window.innerHeight; const h=s11Text.scrollHeight; s11StartY=vh; s11EndY=-h; root.style.setProperty('--s11Y', s11StartY+'px'); }
-function measureS13(){ const vh=window.innerHeight; const h=s13Text.scrollHeight; s13StartY=vh; s13EndY=-h; root.style.setProperty('--s13Y', s13StartY+'px'); }
-function measureS14(){ const vh=window.innerHeight; const h=s14Text.scrollHeight; s14StartY=vh; s14EndY=-h; root.style.setProperty('--s14Y', s14StartY+'px'); }
-function measureS15(){ const vh=window.innerHeight; const h=s15Text.scrollHeight; s15StartY=vh; s15EndY=-h; root.style.setProperty('--s15Y', s15StartY+'px'); }
-
-/* --- Load gates (first images) --- */
-const galAImg0 = document.getElementById('galA-img0');
-function markGalAReady(){ root.style.setProperty('--galAReady','1'); }
-if (galAImg0 && galAImg0.complete && galAImg0.naturalWidth > 0) markGalAReady();
-else if (galAImg0) galAImg0.addEventListener('load', markGalAReady, { once:true });
-
-const galBImg0 = document.getElementById('galB-img0');
-function markGalBReady(){ root.style.setProperty('--galBReady','1'); }
-if (galBImg0 && galBImg0.complete && galBImg0.naturalWidth > 0) markGalBReady();
-else if (galBImg0) galBImg0.addEventListener('load', markGalBReady, { once:true });
-
-const s8Img = document.getElementById('s8-img');
-function markS8Ready(){ root.style.setProperty('--s8Ready','1'); }
-if (s8Img && s8Img.complete && s8Img.naturalWidth > 0) markS8Ready();
-else if (s8Img) s8Img.addEventListener('load', markS8Ready, { once:true });
-
-const galCImg0 = document.getElementById('galC-img0');
-function markGalCReady(){ root.style.setProperty('--galCReady','1'); }
-if (galCImg0 && galCImg0.complete && galCImg0.naturalWidth > 0) markGalCReady();
-else if (galCImg0) galCImg0.addEventListener('load', markGalCReady, { once:true });
-
-const s12Img = document.getElementById('s12-img');
-function markS12Ready(){ root.style.setProperty('--s12Ready','1'); }
-if (s12Img && s12Img.complete && s12Img.naturalWidth > 0) markS12Ready();
-else if (s12Img) s12Img.addEventListener('load', markS12Ready, { once:true });
-
-/* S15 gate */
-const s15Img = document.getElementById('s15-img');
-function markS15Ready(){ root.style.setProperty('--s15Ready','1'); }
-if (s15Img && s15Img.complete && s15Img.naturalWidth > 0) markS15Ready();
-else if (s15Img) s15Img.addEventListener('load', markS15Ready, { once:true });
-
-
-function update(){
-/* HERO choreography */
-const p=progressOf(driver);
-const pFade=easeInOutCubic(clamp(p/0.60,0,1));
-root.style.setProperty('--titleOpacity',pFade.toFixed(3));
-const pSlide=clamp((p-0.60)/0.40,0,1);
-const shift=startShift+(endShift-startShift)*pSlide;
-root.style.setProperty('--shift',shift.toFixed(1)+'px');
-root.style.setProperty('--linksOpacity',pSlide.toFixed(3));
-
-/* Progress */
-const s1=progressOf(s1Wrap);
-const s2=progressOf(s2Wrap);
-const galA=progressOf(galAWrap);
-const s3=progressOf(s3Wrap);
-const s4=progressOf(s4Wrap);
-const s5=progressOf(s5Wrap);
-const galB=progressOf(galBWrap);
-const s8=progressOf(s8Wrap);
-const s9=progressOf(s9Wrap);
-const galC=progressOf(galCWrap);
-const s11=progressOf(s11Wrap);
-const s12=progressOf(s12Wrap);
-const s13=progressOf(s13Wrap);
-const s14=progressOf(s14Wrap);
-const s15=progressOf(s15Wrap);
-
-root.style.setProperty('--s1',s1.toFixed(3));
-root.style.setProperty('--s2',s2.toFixed(3));
-root.style.setProperty('--galA',galA.toFixed(3));
-root.style.setProperty('--s3',s3.toFixed(3));
-root.style.setProperty('--s4',s4.toFixed(3));
-root.style.setProperty('--s5',s5.toFixed(3));
-root.style.setProperty('--galB',galB.toFixed(3));
-root.style.setProperty('--s8',s8.toFixed(3));
-root.style.setProperty('--s9',s9.toFixed(3));
-root.style.setProperty('--galC',galC.toFixed(3));
-root.style.setProperty('--s11',s11.toFixed(3));
-root.style.setProperty('--s12',s12.toFixed(3));
-root.style.setProperty('--s13',s13.toFixed(3));
-root.style.setProperty('--s14',s14.toFixed(3));
-root.style.setProperty('--s15',s15.toFixed(3));
-
-/* Overlays & hero */
-root.style.setProperty('--s1Overlay',(s1>0 && s1<1)?1:0);
-root.style.setProperty('--s2Overlay',(s2>0 && s2<1)?1:0);
-root.style.setProperty('--s4Overlay',(s4>0 && s4<1)?1:0);
-root.style.setProperty('--s5Overlay',(s5>0 && s5<1)?1:0);
-root.style.setProperty('--s9Overlay',(s9>0 && s9<1)?1:0);
-root.style.setProperty('--s11Overlay',(s11>0 && s11<1)?1:0);
-root.style.setProperty('--s13Overlay',(s13>0 && s13<1)?1:0);
-root.style.setProperty('--s14Overlay',(s14>0 && s14<1)?1:0);
-root.style.setProperty('--s15Overlay',(s15>0 && s15<1)?1:0);
-
-root.style.setProperty('--heroAlpha',(1-s1).toFixed(3));
-root.style.setProperty('--heroBlur',(s1*0.8).toFixed(3));
-
-/* Text sweeps (consistent curves) */
-const E=0.8;
-const s1Raw=clamp((s1-0.75)/0.25,0,1); root.style.setProperty('--s1Y', (s1StartY +(s1EndY -s1StartY )*easePow(s1Raw,E))+'px');
-const s2Raw=clamp((s2-0.25)/0.75,0,1); root.style.setProperty('--s2Y', (s2StartY +(s2EndY -s2StartY )*easePow(s2Raw,E))+'px');
-const s4Raw=clamp((s4-0.75)/0.25,0,1); root.style.setProperty('--s4Y', (s4StartY +(s4EndY -s4StartY )*easePow(s4Raw,E))+'px');
-const s5Raw=clamp((s5-0.25)/0.75,0,1); root.style.setProperty('--s5Y', (s5StartY +(s5EndY -s5StartY )*easePow(s5Raw,E))+'px');
-const s9Raw=clamp((s9-0.75)/0.25,0,1); root.style.setProperty('--s9Y', (s9StartY +(s9EndY -s9StartY )*easePow(s9Raw,E))+'px');
-const s11Raw=clamp((s11-0.75)/0.25,0,1); root.style.setProperty('--s11Y',(s11StartY+(s11EndY-s11StartY)*easePow(s11Raw,E))+'px');
-const s13Raw=clamp((s13-0.75)/0.25,0,1); root.style.setProperty('--s13Y',(s13StartY+(s13EndY-s13StartY)*easePow(s13Raw,E))+'px');
-const s14Raw=clamp((s14-0.25)/0.75,0,1); root.style.setProperty('--s14Y',(s14StartY+(s14EndY-s14StartY)*easePow(s14Raw,E))+'px');
-
-/* S15 timing */
-const s15Raw=clamp((s15-0.25)/0.75,0,1);
-root.style.setProperty('--s15Y',(s15StartY+(s15EndY-s15StartY)*easePow(s15Raw,E))+'px');
-
-/* End zooms (full-bleed S3, S8, S12, S15) */
-const s3ZoomRaw = clamp((s3 - 0.82) / 0.18, 0, 1); root.style.setProperty('--s3Scale', (1 + 0.08 * easeInOutCubic(s3ZoomRaw)).toFixed(3));
-const s8ZoomRaw = clamp((s8 - 0.82) / 0.18, 0, 1); root.style.setProperty('--s8Scale', (1 + 0.08 * easeInOutCubic(s8ZoomRaw)).toFixed(3));
-const s12ZoomRaw = clamp((s12 - 0.82) / 0.18, 0, 1);root.style.setProperty('--s12Scale', (1 + 0.08 * easeInOutCubic(s12ZoomRaw)).toFixed(3));
-const s15ZoomRaw = clamp((s15 - 0.82) / 0.18, 0, 1);root.style.setProperty('--s15Scale', (1 + 0.08 * easeInOutCubic(s15ZoomRaw)).toFixed(3));
-
-/* ===== Crossfades (standardized) ===== */
-const FADE_FRAC = 0.35;
-const LEAD_FRAC = 0.15;
-
-/* S1 → S2 */
-const s1In = clamp(s1/FADE_FRAC, 0, 1);
-const textBottomS1 = (parseFloat(getComputedStyle(root).getPropertyValue('--s1Y'))||0) + s1Text.scrollHeight;
-const gateS1S2 = (textBottomS1 <= window.innerHeight * LEAD_FRAC) ? 1 : 0;
-const x12 = clamp(s2/FADE_FRAC, 0, 1);
-let s1Alpha = Math.min(gateS1S2 ? (1 - x12) : 1, s1In);
-let s2Alpha = gateS1S2 ? x12 : 0;
-
-/* S2 → gallery-A */
-const textBottomS2 = (parseFloat(getComputedStyle(root).getPropertyValue('--s2Y'))||0) + s2Text.scrollHeight;
-const gateS2A = (textBottomS2 <= window.innerHeight * LEAD_FRAC) || (s2 >= 0.999);
-const x2A = clamp(galA/FADE_FRAC, 0, 1);
-let galAGroup = 0;
-if (gateS2A && getComputedStyle(root).getPropertyValue('--galAReady')==='1') galAGroup = x2A;
-if (gateS2A) s2Alpha = s2Alpha * (1 - x2A);
-
-/* gallery-A → S3 */
-const xA3 = clamp(s3/FADE_FRAC, 0, 1);
-const s3Alpha = xA3;
-const galAOut = (1 - xA3);
-
-/* S3 → S4 */
-const x34 = clamp(s4/FADE_FRAC, 0, 1);
-let s4Alpha = x34;
-const s3AlphaOut = s3Alpha * (1 - x34);
-
-/* S4 → S5 */
-const textBottomS4 = (parseFloat(getComputedStyle(root).getPropertyValue('--s4Y'))||0) + s4Text.scrollHeight;
-const gateS4S5 = (textBottomS4 <= window.innerHeight * LEAD_FRAC) || (s4 >= 0.999);
-const x45 = clamp(s5/FADE_FRAC, 0, 1);
-let s5Alpha = gateS4S5 ? x45 : 0;
-if (gateS4S5) s4Alpha = s4Alpha * (1 - x45);
-
-/* S5 → gallery-B */
-const textBottomS5 = (parseFloat(getComputedStyle(root).getPropertyValue('--s5Y'))||0) + s5Text.scrollHeight;
-const gateS5B = (textBottomS5 <= window.innerHeight * LEAD_FRAC) || (s5 >= 0.999);
-const x5B = clamp(galB/FADE_FRAC, 0, 1);
-let galBGroup = 0;
-if (gateS5B && getComputedStyle(root).getPropertyValue('--galBReady')==='1') galBGroup = x5B;
-if (gateS5B) s5Alpha = s5Alpha * (1 - x5B);
-
-/* gallery-B → S8 (full-bleed) */
-const xB8 = clamp(s8/FADE_FRAC, 0, 1);
-const s8Group = (getComputedStyle(root).getPropertyValue('--s8Ready')==='1') ? xB8 : 0;
-const galBOut = (1 - s8Group);
-
-/* S8 → S9 */
-const x89 = clamp(s9/FADE_FRAC, 0, 1);
-let s9Alpha = x89;
-const s8AlphaOut = s8Group * (1 - x89);
-
-/* S9 → gallery-C */
-const textBottomS9 = (parseFloat(getComputedStyle(root).getPropertyValue('--s9Y'))||0) + s9Text.scrollHeight;
-const gateS9C = (textBottomS9 <= window.innerHeight * LEAD_FRAC) || (s9 >= 0.999);
-const x9C = clamp(galC/FADE_FRAC, 0, 1);
-let galCGroup = 0;
-if (gateS9C && getComputedStyle(root).getPropertyValue('--galCReady')==='1') galCGroup = x9C;
-if (gateS9C) s9Alpha = s9Alpha * (1 - x9C);
-
-/* gallery-C → S11 */
-const xC11 = clamp(s11/FADE_FRAC, 0, 1);
-let s11Alpha = xC11;
-const galCOut = (1 - xC11);
-
-/* S11 → S12 (full-bleed), load-gated */
-const x11_12 = clamp(s12/FADE_FRAC, 0, 1);
-const s12Group = (getComputedStyle(root).getPropertyValue('--s12Ready')==='1') ? x11_12 : 0;
-s11Alpha = s11Alpha * ((getComputedStyle(root).getPropertyValue('--s12Ready')==='1') ? (1 - x11_12) : 1);
-
-/* S12 → S13 (full-bleed → framed, like S3→S4) */
-const x12_13 = clamp(s13/FADE_FRAC, 0, 1);
-let s13Alpha = x12_13;
-const s12AlphaOut2 = s12Group * (1 - x12_13);
-
-/* S13 → S14 (like S1→S2) */
-const textBottomS13 = (parseFloat(getComputedStyle(root).getPropertyValue('--s13Y'))||0) + s13Text.scrollHeight;
-const gateS13S14 = (textBottomS13 <= window.innerHeight * LEAD_FRAC) || (s13 >= 0.999);
-const x13_14 = clamp(s14/FADE_FRAC, 0, 1);
-let s14Alpha = gateS13S14 ? x13_14 : 0;
-if (gateS13S14) s13Alpha = s13Alpha * (1 - x13_14);
-
-/* S14 → S15 (full-bleed; load-gated like S11→S12) */
-const x14_15 = clamp(s15/FADE_FRAC, 0, 1);
-const s15Group = (getComputedStyle(root).getPropertyValue('--s15Ready')==='1') ? x14_15 : 0;
-s14Alpha = s14Alpha * ((getComputedStyle(root).getPropertyValue('--s15Ready')==='1') ? (1 - x14_15) : 1);
-
-/* ===== Internal galleries ===== */
-/* gallery-A (4 imgs, stepped crossfade) — unchanged */
-const INTERNAL_START_A = FADE_FRAC;
-const tA = clamp((galA - INTERNAL_START_A) / (1 - INTERNAL_START_A), 0, 1);
-const A_FADE = 0.22; /* fade segment between images */
-const A_HOLD = (1 - 3*A_FADE) / 4; /* 4 holds, 3 fades -> sums to 1 */
-const step=(t,s,w)=>clamp((t-s)/w,0,1);
-
-let a0=1, a1=0, a2=0, a3=0;
-const TA1=A_HOLD;
-const TA2=TA1 + A_FADE + A_HOLD;
-const TA3=TA2 + A_FADE + A_HOLD;
-
-const g1=step(tA, TA1, A_FADE); a0*= (1 - g1); a1 = Math.max(a1, g1);
-const g2=step(tA, TA2, A_FADE); a1*= (1 - g2); a2 = Math.max(a2, g2);
-const g3=step(tA, TA3, A_FADE); a2*= (1 - g3); a3 = Math.max(a3, g3);
-
-const galAGroup2 = (getComputedStyle(root).getPropertyValue('--galAReady')==='1') ? clamp(galA/FADE_FRAC,0,1) : 0;
-const galAOut2 = (1 - clamp(s3/FADE_FRAC,0,1));
-
-root.style.setProperty('--galAImg0Opacity', (a0 * galAGroup2 * galAOut2).toFixed(3));
-root.style.setProperty('--galAImg1Opacity', (a1 * galAGroup2 * galAOut2).toFixed(3));
-root.style.setProperty('--galAImg2Opacity', (a2 * galAGroup2 * galAOut2).toFixed(3));
-root.style.setProperty('--galAImg3Opacity', (a3 * galAGroup2 * galAOut2).toFixed(3));
-
-/* gallery-B (5 imgs, stepped crossfade) — unchanged */
-const INTERNAL_START_B = FADE_FRAC;
-const tB = clamp(((galB - INTERNAL_START_B) / (1 - INTERNAL_START_B)) * 1.25, 0, 1);
-const B_FADE = 0.22, B_HOLD = (1 - 4*B_FADE)/5 * 1.25;
-const normB = 1/(5*B_HOLD + 4*B_FADE);
-const BF=B_FADE*normB, BH=B_HOLD*normB;
-const TB1=BH, TB2=TB1+BF+BH, TB3=TB2+BF+BH, TB4=TB3+BF+BH;
-
-let b0=1,b1=0,b2=0,b3=0,b4=0;
-const h=(t,s,w)=>clamp((t-s)/w,0,1);
-
-const gB1=h(tB, TB1, BF); b0*= (1 - gB1); b1 = Math.max(b1, gB1);
-const gB2=h(tB, TB2, BF); b1*= (1 - gB2); b2 = Math.max(b2, gB2);
-const gB3=h(tB, TB3, BF); b2*= (1 - gB3); b3 = Math.max(b3, gB3);
-const gB4=h(tB, TB4, BF); b3*= (1 - gB4); b4 = Math.max(b4, gB4);
-
-const galBGroup2 = (getComputedStyle(root).getPropertyValue('--galBReady')==='1') ? clamp(galB/FADE_FRAC,0,1) : 0;
-const galBOut2 = (1 - clamp(s8/FADE_FRAC,0,1));
-
-root.style.setProperty('--galBImg0Opacity', (b0 * galBGroup2 * galBOut2).toFixed(3));
-root.style.setProperty('--galBImg1Opacity', (b1 * galBGroup2 * galBOut2).toFixed(3));
-root.style.setProperty('--galBImg2Opacity', (b2 * galBGroup2 * galBOut2).toFixed(3));
-root.style.setProperty('--galBImg3Opacity', (b3 * galBGroup2 * galBOut2).toFixed(3));
-root.style.setProperty('--galBImg4Opacity', (b4 * galBGroup2 * galBOut2).toFixed(3));
-
-/* gallery-C (now 6 imgs, stepped crossfade; minimal change) */
-const INTERNAL_START_C = FADE_FRAC;
-const tC = clamp(((galC - INTERNAL_START_C) / (1 - INTERNAL_START_C)) * 1.5, 0, 1);
-const C_FADE = 0.22, C_HOLD = (1 - 5*C_FADE)/6 * 1.25; /* match style of B */
-const normC = 1/(6*C_HOLD + 5*C_FADE);
-const CF=C_FADE*normC, CH=C_HOLD*normC;
-const TC1=CH, TC2=TC1+CF+CH, TC3=TC2+CF+CH, TC4=TC3+CF+CH, TC5=TC4+CF+CH;
-
-let c0=1,c1=0,c2=0,c3=0,c4=0,c5=0;
-const stepC=(t,s,w)=>clamp((t-s)/w,0,1);
-
-const gC1=stepC(tC, TC1, CF); c0*= (1 - gC1); c1 = Math.max(c1, gC1);
-const gC2=stepC(tC, TC2, CF); c1*= (1 - gC2); c2 = Math.max(c2, gC2);
-const gC3=stepC(tC, TC3, CF); c2*= (1 - gC3); c3 = Math.max(c3, gC3);
-const gC4=stepC(tC, TC4, CF); c3*= (1 - gC4); c4 = Math.max(c4, gC4);
-const gC5=stepC(tC, TC5, CF); c4*= (1 - gC5); c5 = Math.max(c5, gC5);
-
-const galCGroup2 = (getComputedStyle(root).getPropertyValue('--galCReady')==='1') ? clamp(galC/FADE_FRAC,0,1) : 0;
-const galCOut2 = (1 - clamp(s11/FADE_FRAC,0,1));
-
-root.style.setProperty('--galCImg0Opacity', (c0 * galCGroup2 * galCOut2).toFixed(3));
-root.style.setProperty('--galCImg1Opacity', (c1 * galCGroup2 * galCOut2).toFixed(3));
-root.style.setProperty('--galCImg2Opacity', (c2 * galCGroup2 * galCOut2).toFixed(3));
-root.style.setProperty('--galCImg3Opacity', (c3 * galCGroup2 * galCOut2).toFixed(3));
-root.style.setProperty('--galCImg4Opacity', (c4 * galCGroup2 * galCOut2).toFixed(3));
-root.style.setProperty('--galCImg5Opacity', (c5 * galCGroup2 * galCOut2).toFixed(3));
-
-/* ===== Apply section frame opacities ===== */
-root.style.setProperty('--s1ImgOpacity', s1Alpha.toFixed(3));
-root.style.setProperty('--s2ImgOpacity', s2Alpha.toFixed(3));
-root.style.setProperty('--s3ImgOpacity', s3AlphaOut.toFixed(3));
-root.style.setProperty('--s4ImgOpacity', s4Alpha.toFixed(3));
-root.style.setProperty('--s5ImgOpacity', s5Alpha.toFixed(3));
-root.style.setProperty('--s8ImgOpacity', s8AlphaOut.toFixed(3));
-root.style.setProperty('--s9ImgOpacity', s9Alpha.toFixed(3));
-root.style.setProperty('--s11ImgOpacity', s11Alpha.toFixed(3));
-root.style.setProperty('--s12ImgOpacity', s12AlphaOut2.toFixed(3));
-root.style.setProperty('--s13ImgOpacity', s13Alpha.toFixed(3));
-root.style.setProperty('--s14ImgOpacity', s14Alpha.toFixed(3));
-root.style.setProperty('--s15ImgOpacity', s15Group.toFixed(3));
-}
-
-async function init(){
-if(document.fonts && document.fonts.ready){ try{ await document.fonts.ready; }catch(e){} }
-measureHero();
-measureS1(); measureS2(); measureS4(); measureS5(); measureS9(); measureS11(); measureS13(); measureS14(); measureS15();
-update();
-addEventListener('load',  ()=>{ measureHero(); measureS1(); measureS2(); measureS4(); measureS5(); measureS9(); measureS11(); measureS13(); measureS14(); measureS15(); update(); });
-addEventListener('resize',  ()=>{ measureHero(); measureS1(); measureS2(); measureS4(); measureS5(); measureS9(); measureS11(); measureS13(); measureS14(); measureS15(); update(); });
-addEventListener('scroll', update, {passive:true});
-}
-init();
-})();
-</script>
-</body>
-</html>
-
 
