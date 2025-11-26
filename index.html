@@ -186,8 +186,6 @@ display:flex; align-items:center; justify-content:center; overflow:hidden;
    RTL LOGIC FOR FRAMES:
    Standard Rail (S1, S4, S9, S11, S13) now implies TEXT on RIGHT.
    Therefore, IMAGE must be on LEFT.
-   Left Gap = 82px.
-   Right Gap = 96px (Margin) + 460px (Rail) + 96px (Gutter).
 */
 
 /* S1 image LEFT (text right) */
@@ -388,14 +386,15 @@ left:96px; right: auto;
 width:460px; overflow:hidden;
 }
 
+/* RTL FIX: All text must be right-aligned internally for Hebrew */
 .s1-text{ transform:translateY(var(--s1Y)); color:#111; text-align:right; }
-.s2-text{ transform:translateY(var(--s2Y)); color:#111; text-align:left; /* Mirror align */ }
+.s2-text{ transform:translateY(var(--s2Y)); color:#111; text-align:right; /* RTL FIX: Was left, now right */ }
 .s4-text{ transform:translateY(var(--s4Y)); color:#111; text-align:right; }
-.s5-text{ transform:translateY(var(--s5Y)); color:#111; text-align:left; /* Mirror align */ }
+.s5-text{ transform:translateY(var(--s5Y)); color:#111; text-align:right; /* RTL FIX: Was left, now right */ }
 .s9-text{ transform:translateY(var(--s9Y)); color:#111; text-align:right; }
 .s11-text{ transform:translateY(var(--s11Y)); color:#111; text-align:right; }
 .s13-text{ transform:translateY(var(--s13Y)); color:#111; text-align:right; }
-.s14-text{ transform:translateY(var(--s14Y)); color:#111; text-align:left; /* Mirror align */ }
+.s14-text{ transform:translateY(var(--s14Y)); color:#111; text-align:right; /* RTL FIX: Was left, now right */ }
 
 /* ===== S15: CENTER COLUMN OVERLAY ===== */
 .s15-rail{
@@ -1199,4 +1198,3 @@ init();
 </script>
 </body>
 </html>
-
