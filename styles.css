@@ -1,0 +1,154 @@
+/* ================== Base ================== */
+html,body{
+  margin:0; padding:0; background:#000; color:#fff;
+  font-family:"Acumin Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Vars controlled by JS */
+:root{
+  --p: 0;               /* generic scroll progress */
+  --shift: 0px;         /* vertical translation for column */
+  --titleOpacity: 0;    /* title fade */
+  --linksOpacity: 0;    /* links fade */
+  --s1: 0;              /* section 1 scroll progress */
+  --s1ImgOpacity: 0;    /* section 1 image fade */
+  --s1Text: 0;          /* section 1 text slide */
+}
+
+/* ================== Hero ================== */
+
+/* Wrapper defines scroll span (taller = slower scroll animation) */
+.hero-wrap{ 
+  position:relative; 
+  height:160vh; 
+}
+
+/* Sticky viewport: holds hero in place */
+.hero-sticky{ 
+  position:sticky; 
+  top:0; 
+  height:100vh; 
+  overflow:hidden; 
+}
+
+/* Background image — fades in on load */
+.hero-bg{
+  position:absolute; inset:0;
+  background:#000 url("assets/hero1gc.jpg") center/cover no-repeat;
+  opacity:0;
+  animation: heroIn 1000ms ease-out forwards;  /* slowed to 1000ms */
+}
+@keyframes heroIn{ from{opacity:0} to{opacity:1} }
+
+/* Media box with margins */
+.hero-media{
+  position:absolute;
+  inset:96px 82px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  overflow:hidden;  /* clip below the baseline */
+}
+
+/* Column: slides as a unit */
+.col{
+  position:relative;
+  max-width:700px;
+  transform: translateY(var(--shift));
+  will-change: transform;
+}
+
+/* Title text */
+.hero-title{
+  margin:0 0 24px 0;
+  font-weight:400;
+  font-size:100px;
+  line-height:100px;
+  color:#fff;
+  opacity: var(--titleOpacity);
+  will-change: opacity;
+}
+.hero-title .line{ display:block; }
+
+/* Links container (so opacity fade works if used in JS) */
+.hero-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:24px;
+  line-height:30px;
+  opacity: var(--linksOpacity);
+  transition: opacity .25s linear;
+}
+
+/* Links — white by default, green on hover, never underlined */
+.hero-links a:link,
+.hero-links a:visited{
+  color:#fff;
+  text-decoration:none;
+  transition: color .2s ease;
+  cursor:pointer;
+}
+
+.hero-links a:hover,
+.hero-links a:focus-visible{
+  color:#00A86B !important;   /* garden green */
+  text-decoration:none;       /* ensure no underline */
+}
+
+/* Force hero link colors */
+.hero-media .hero-links a{ 
+  color:#fff !important; 
+  text-decoration:none !important; 
+  cursor:pointer;
+}
+.hero-media .hero-links a:hover,
+.hero-media .hero-links a:focus-visible{
+  color:#00A86B !important;     /* garden green */
+  text-decoration:none !important;
+}
+
+/* ================== Section 1 ================== */
+
+/* Wrapper (full viewport height, background color) */
+.section1{
+  position:relative;
+  height:100vh;
+  background:#e5e4e0;
+  display:flex;
+  inset:0;
+}
+
+/* Left text column (clipped to viewport) */
+.s1-text-clip{
+  flex:0 0 512px;
+  margin-left:82px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+
+/* Text itself slides up on scroll */
+.s1-text{
+  font-size:20px;
+  line-height:28px;
+  color:#111;
+  transform: translateY(calc((1 - var(--s1Text)) * 40vh));
+  will-change: transform;
+}
+
+/* Right media (sticky, centered image that fades in) */
+.s1-media{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.s1-media img{
+  width:840px;
+  height:1120px;
+  object-fit:cover;
+  opacity:var(--s1ImgOpacity);
+  transition:opacity 0.4s linear;
+}
