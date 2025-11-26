@@ -386,7 +386,7 @@ left:96px; right: auto;
 width:460px; overflow:hidden;
 }
 
-/* RTL FIX: All text must be right-aligned internally for Hebrew */
+/* RTL FIX: All section text containers are forced to right-align internally for Hebrew */
 .s1-text{ transform:translateY(var(--s1Y)); color:#111; text-align:right; }
 .s2-text{ transform:translateY(var(--s2Y)); color:#111; text-align:right; /* RTL FIX: Was left, now right */ }
 .s4-text{ transform:translateY(var(--s4Y)); color:#111; text-align:right; }
@@ -395,6 +395,14 @@ width:460px; overflow:hidden;
 .s11-text{ transform:translateY(var(--s11Y)); color:#111; text-align:right; }
 .s13-text{ transform:translateY(var(--s13Y)); color:#111; text-align:right; }
 .s14-text{ transform:translateY(var(--s14Y)); color:#111; text-align:right; /* RTL FIX: Was left, now right */ }
+
+/* Global Rail Paragraph Styles */
+.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
+.s11-text p, .s13-text p, .s14-text p, .s15-text p{
+margin:0 0 14px 0; font-size:20px; line-height:28px;
+/* 💡 FINAL DESKTOP FIX: Apply text-align: right directly to the inner <p> elements */
+text-align: right;
+}
 
 /* ===== S15: CENTER COLUMN OVERLAY ===== */
 .s15-rail{
@@ -406,10 +414,6 @@ overflow:hidden;
 .s15-text{
 transform:translateY(var(--s15Y));
 color:#fff; text-align:center;
-}
-.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
-.s11-text p, .s13-text p, .s14-text p, .s15-text p{
-margin:0 0 14px 0; font-size:20px; line-height:28px;
 }
 .after{ min-height:120vh; }
 
@@ -490,6 +494,11 @@ text-align:center !important;
 font-size:18px; line-height:26px;
 margin:80px 0 80px 0;
 }
+.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
+.s11-text p, .s13-text p, .s14-text p {
+    text-align: center !important;
+}
+
 
 .s15-text {
 color:#fff !important; text-align:center !important; padding:0 !important;
@@ -556,20 +565,34 @@ width: 600px !important; margin: 0 auto !important;
 top: 0 !important; bottom: 0 !important; padding: 20px !important;
 }
 
+/* Text Containers */
 .s1-text, .s2-text, .s4-text, .s5-text,
-.s9-text, .s11-text, .s13-text, .s14-text, .s15-text {
+.s9-text, .s11-text, .s13-text, .s14-text {
 padding: 0 20px !important;
 margin: 80px auto 80px auto !important;
 left: auto !important; right: auto !important;
 transform: none !important;
 max-width: 100% !important; width: auto !important;
-text-align: right !important; /* Force RTL alignment on tablet */
+text-align: right !important; /* Force RTL alignment on tablet container */
+}
+/* Text Paragraphs */
+.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
+.s11-text p, .s13-text p, .s14-text p {
+    text-align: right !important; /* Force RTL alignment on tablet paragraphs */
 }
 
 .s15-text {
-text-align: center !important; color: #fff !important;
-left: 50% !important; transform: translateX(-50%) !important;
+padding: 0 20px !important;
+margin: 80px auto 80px auto !important;
+left: auto !important; right: auto !important;
+transform: none !important;
+max-width: 100% !important; width: auto !important;
+text-align: center !important; /* S15 is center-aligned */
+color: #fff !important;
+position: relative !important; left: 50% !important;
+transform: translateX(-50%) !important;
 }
+
 
 .galA-left-frame, .galB-center-frame, .galC-left-frame {
 width: 600px !important;
@@ -749,9 +772,9 @@ Fusce quis magna elit. Aenean mi tellus, fermentum eu pharetra id, fermentum non
 <div class="s11-text" id="s11-text">
 <p><strong>SECTION ELEVEN</strong> continues the thread…</p>
 <p>Back to the left rail; image anchors the right…</p>
-<p>Margins and rhythm unchanged…</p>
-<p>Standard crossfades keep the cadence…</p>
-<p>As the story settles into focus.</p>
+<p>Pacing and fades match Section Two…</p>
+<p>As the view widens and settles…</p>
+<p>Into the next cadence.</p>
 </div>
 </div>
 </div>
