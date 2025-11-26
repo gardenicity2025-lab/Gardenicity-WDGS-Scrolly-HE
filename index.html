@@ -1,11 +1,11 @@
-RTL-TEST-WDGS+LieblingFont-26-11-25
+WDGS+LieblingFont in 25-11-25
 
 <!doctype html>
 <html lang="en" data-baseline="stable-2025-10-01__rails-460px__galC-6-only">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Gardenicity — What Did Geddes See</title>
+<title>Gardenicity — What did Geddes see?</title>
 
 <style>
 /* ==========================================================
@@ -81,11 +81,7 @@ RTL-TEST-WDGS+LieblingFont-26-11-25
     font-family: "Liebling Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
 }
 
-* {
-    font-family: "Liebling Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
-}
-
-/* Running text → Liebling Pro Light (300) */
+/* Section running text → Liebling Pro Light (300) (S15 remains regular) */
 .s1-text p,
 .s2-text p,
 .s4-text p,
@@ -93,10 +89,17 @@ RTL-TEST-WDGS+LieblingFont-26-11-25
 .s9-text p,
 .s11-text p,
 .s13-text p,
-.s14-text p,
-font-weight: 300 !important;
+.s14-text p {
+    font-weight: 300 !important;
 }
 
+/* Rail running text → Liebling Pro Light (300) + tuned line-height */
+.sRail-left p,
+.sRail-right p,
+.sRail-text p {
+    font-weight: 300 !important;
+    line-height: 1.35 !important;
+}
 
 /* ===== Base ===== */
 html, body {
