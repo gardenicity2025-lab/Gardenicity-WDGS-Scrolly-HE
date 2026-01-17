@@ -415,7 +415,11 @@ overflow:hidden;
 }
 .s15-text{
 transform:translateY(var(--s15Y));
-color:#fff; text-align:center; direction:ltr;
+color:#fff; text-align:center; 
+}
+/* 🔑 FORCE CENTERING OF PARAGRAPHS (FIXES HEBREW) */
+.s15-text p{
+text-align:center;
 }
 .after{ min-height:120vh; }
 
