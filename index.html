@@ -441,12 +441,26 @@ MOBILE RESPONSIVE (max-width:600px)
 @media (max-width:600px){
 body { margin:0; padding:0; background:#eaeeec; text-align: center; }
 
-/* ==== HERO ==== */
+/* ==== HERO Link Styles ==== */
 .hero-media { top:20px; bottom:20px; left:20px; right:20px; }
 .hero-title { font-size:72px; line-height:1.05; text-align: center; }
 .hero-links {
 font-size:20px; line-height:26px;
 text-align: center; align-items: center;
+}
+.hero-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.hero-links a:hover,
+.hero-links a:focus-visible {
+  color: #00A86B;
+}
+.hero-links .dead-link {
+  color: #fff;
+  cursor: default; /* indicates non-clickable */
+  text-decoration: none;
 }
 
 /* ==== SECTION WRAPS ==== */
