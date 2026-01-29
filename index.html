@@ -445,16 +445,18 @@ MOBILE RESPONSIVE (max-width:600px)
 @media (max-width:600px){
 body { margin:0; padding:0; background:#eaeeec; text-align: center; }
 
-/* ==== HERO (Update Step 1: 11vw) ==== */
+/* ==== HERO (Update: 11vw + RTL Alignment) ==== */
 .hero-media { top:20px; bottom:20px; left:20px; right:20px; }
 .hero-title { 
-  font-size: 11vw !important; /* UPDATED */
+  font-size: 11vw !important; 
   line-height: 1.05; 
-  text-align: center; 
+  text-align: right !important; /* FIXED TO RTL */
+  direction: rtl;               /* FIXED TO RTL */
 }
 .hero-links {
 font-size:20px; line-height:26px;
-text-align: center; align-items: center;
+text-align: right !important; /* FIXED TO RTL */
+direction: rtl;
 }
 .hero-links a {
   color: #fff;
@@ -467,7 +469,7 @@ text-align: center; align-items: center;
 }
 .hero-links .dead-link {
   color: #fff;
-  cursor: default; /* indicates non-clickable */
+  cursor: default;
   text-decoration: none;
 }
 
@@ -505,7 +507,7 @@ padding: 80px 20px 80px 20px !important;
 z-index: 5 !important;
 }
 
-/* Reset Rails for Mobile (Center) */
+/* Reset Rails for Mobile */
 .s1-rail, .s2-rail, .s4-rail, .s5-rail,
 .s9-rail, .s11-rail, .s13-rail, .s14-rail, .s15-rail {
 position:relative !important; width:100% !important; margin:0 !important;
@@ -513,21 +515,22 @@ left:auto !important; right:auto !important; transform: none !important;
 }
 .s15-rail { margin: 0 auto !important; }
 
-/* Reset Text Alignment for Mobile */
+/* ==== TEXT ALIGNMENT (S1-S14 RTL) ==== */
 .s1-text, .s2-text, .s4-text, .s5-text,
-.s9-text, .s11-text, .s13-text, .s14-text, .s15-text {
+.s9-text, .s11-text, .s13-text, .s14-text {
 transform:none !important; color:#111;
-/* In mobile, we usually center or keep RTL standard */
-text-align:center !important;
+text-align:right !important; 
+direction: rtl;              
 font-size:18px; line-height:26px;
 margin:80px 0 80px 0;
 }
+
 .s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
 .s11-text p, .s13-text p, .s14-text p {
-    text-align: center !important;
+    text-align: right !important;
 }
 
-
+/* FOOTER SECTION 15 (Centered) */
 .s15-text {
 color:#fff !important; text-align:center !important; padding:0 !important;
 margin: 80px auto 80px auto !important;
@@ -560,11 +563,15 @@ TABLET RESPONSIVE (min-width:601px and max-width:1023px)
 @media (min-width:601px) and (max-width:1023px) {
 
 .hero-title {
-font-size: clamp(80px, 11vw, 110px) !important; /* UPDATED */
+font-size: clamp(80px, 11vw, 110px) !important;
 line-height: 1.05 !important;
+text-align: right !important;
+direction: rtl;
 }
 .hero-links {
 font-size: 24px !important; line-height: 28px !important;
+text-align: right !important;
+direction: rtl;
 }
 
 .s1-wrap, .s2-wrap, .s4-wrap, .s5-wrap,
@@ -583,17 +590,17 @@ pointer-events: auto !important; transform: none !important;
 background: transparent !important; padding: 80px 0 80px 0 !important; z-index: 5 !important;
 }
 
-/* Section Images - Constrain to 600px column */
+/* Section Images */
 .s1-frame, .s2-frame, .s4-frame, .s5-frame,
 .s9-frame, .s11-frame, .s13-frame, .s14-frame {
 position: absolute !important;
 left: 50% !important; transform: translateX(-50%) !important;
-right: auto !important; /* Reset RTL specific right */
+right: auto !important; 
 width: 600px !important; margin: 0 auto !important;
 top: 0 !important; bottom: 0 !important; padding: 20px !important;
 }
 
-/* Text Containers */
+/* Text Containers (Tablet RTL) */
 .s1-text, .s2-text, .s4-text, .s5-text,
 .s9-text, .s11-text, .s13-text, .s14-text {
 padding: 0 20px !important;
@@ -601,12 +608,8 @@ margin: 80px auto 80px auto !important;
 left: auto !important; right: auto !important;
 transform: none !important;
 max-width: 100% !important; width: auto !important;
-text-align: right !important; /* Force RTL alignment on tablet container */
-}
-/* Text Paragraphs */
-.s1-text p, .s2-text p, .s4-text p, .s5-text p, .s9-text p,
-.s11-text p, .s13-text p, .s14-text p {
-    text-align: right !important; /* Force RTL alignment on tablet paragraphs */
+text-align: right !important; 
+direction: rtl;
 }
 
 .s15-text {
@@ -615,12 +618,11 @@ margin: 80px auto 80px auto !important;
 left: auto !important; right: auto !important;
 transform: none !important;
 max-width: 100% !important; width: auto !important;
-text-align: center !important; /* S15 is center-aligned */
+text-align: center !important; 
 color: #fff !important;
 position: relative !important; left: 50% !important;
 transform: translateX(-50%) !important;
 }
-
 
 .galA-left-frame, .galB-center-frame, .galC-left-frame {
 width: 600px !important;
@@ -629,7 +631,6 @@ right: auto !important;
 padding: 0 20px !important;
 }
 }
-
 
 </style>
 </head>
